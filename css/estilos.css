@@ -1,0 +1,861 @@
+* {
+
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+
+}
+ 
+ body {
+
+    background: #fff;
+    font-family: 'Open Sans', sans-serif; 
+
+}
+
+/* ---- PARAMETROS PARA EL CONTENEDOR PRINCIPAL DE CADA PAGINA ----- */
+
+.contenedor{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+
+}
+
+/* -------------- H1 PARA TOAS LAS PAGINAS -------------------- */
+.contenedor .h1_generico{
+
+    font-size: 34px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #BAD94A;
+    text-align: center;  
+
+}
+
+/* -------------- H2 PARA TOAS LAS PAGINAS -------------------- */
+.contenedor .h2_generico {
+
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #BAD94A;
+    text-align: center; 
+
+}
+
+/* -------------- H4 PARA TOAS LAS PAGINAS -------------------- */
+.contenedor .h4_generico {
+
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+/* -------------- PARRAFO PARA TOAS LAS PAGINAS -------------------- */
+.contenedor .p_generico {
+
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+    text-align: justify;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+
+}
+
+/* -------------- HEADER TODAS LAS PAGINAS -------------------- */
+
+header {
+
+    width: 100%;
+	padding: 50px 0;
+    color: #fff;
+    background-image: url('../img/cabecera_fondo.jpg');
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+}
+
+header .header_padre {
+    display: flex;
+    list-style-type: none;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+}
+
+header .header_padre .menu_nav a {
+    color: #fff;
+	text-decoration: none;
+	margin-right:40px;
+	font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header .header_padre .menu_nav a:hover {
+    padding: 10px 10px 10px 10px;
+    background-color: #BAD94A;
+}
+
+
+/* ------------- FOOTER TODAS LAS PAGINAS -------------------- */
+
+footer {
+    width: 100%;
+	padding: 50px 30px 50px 30px;
+    background: #03A64A;
+}
+
+footer .footer_padre {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .footer_padre .footer_info .footer_link{
+    color:black;
+    font-size: 16px;
+    font-weight:700;
+    letter-spacing: 1px; 
+}
+
+footer .footer_padre .footer_logo .logo img{
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+footer .footer_padre .footer_social a{
+    font-size: 24px;
+    color: #fff;
+    margin: auto 20px;
+}
+
+footer .footer_padre .footer_social a:hover {
+    background-color: #BAD94A;
+    padding: 10px 10px 10px 10px;
+}
+
+
+/* ------------------ ESTILOS MAIN HOME ------------------------ */
+/*------------------- SECTION ACERCA DE ------------------------ */ 
+
+.acerca_de{
+    background: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.acerca_de .img_info_asc {
+    margin-top:auto; 
+}
+
+.acerca_de .img_info_asc img {
+    width: 100%;
+    height: 500px;
+}
+
+
+/* ------------ ESTILOS SECTION TRABAJOS CON IMAGENES ------------- */
+
+.galeria_padre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.galeria_hijo{
+    position: relative;    
+}
+
+.galeria_hijo img {
+    width: 100%;
+    height: 100%;
+}
+
+.galeria_hijo .titulo_img{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 18px;
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+
+/* -------------- REGLAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO - HOME ---------------- */
+
+@media only screen and (max-width:600px){
+
+    header .header_padre .menu_nav a {
+        margin-right:20px;
+        font-size: 14px;
+    }
+    
+    header .header_padre .menu_nav a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .contenedor .h1_generico{
+        font-size: 22px;        
+    }
+
+    .contenedor .h2_generico{
+        font-size: 20px;        
+    }
+
+    .galeria_padre {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria_hijo img {
+        width: 80%;
+        height: 80%;
+    }
+
+    footer .footer_padre .footer_info .h4_generico {
+        font-size: 16px;
+    }
+    
+    footer .footer_padre .footer_info .footer_link{
+        font-size: 14px;
+    }
+
+    footer .footer_padre .footer_social .h4_generico {
+        font-size: 16px;
+    }
+
+    footer .footer_padre .footer_social a{
+        font-size: 20px;
+    }
+    
+    footer .footer_padre .footer_social a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+}
+
+@media only screen and (min-width:600px){
+
+    header .header_padre .menu_nav a {
+        margin-right:40px;
+    }
+    
+    header .header_padre .menu_nav a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .contenedor .h1_generico{
+        font-size: 24px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 22px;
+    }
+
+    .galeria_padre {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .galeria_hijo img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (min-width:768px){
+
+    .contenedor .h1_generico{
+        font-size: 30px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 26px;
+    }
+
+}
+
+@media only screen and (min-width:992px){
+
+    header .header_padre .menu_nav a:hover {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .contenedor .h1_generico{
+        font-size: 34px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 30px;
+    }
+
+    .galeria_padre {
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+    }
+
+}
+
+
+/* ------------------ MAIN EMPRESA ------------------------- */
+ 
+.quienes_somos{
+    background: #f7f7f7;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.quienes_somos .contenedor_quienes_somos .img{
+    max-width: 1200px;
+}
+
+.quienes_somos .contenedor_objetivo .img{
+    max-width: 1200px;
+}
+
+
+/* -------------- REGLAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO - EMPRESA ---------------- */
+
+@media only screen and (max-width:600px){
+
+    header .header_padre .menu_nav a {
+        margin-right:20px;
+        font-size: 14px;
+    }
+    
+    header .header_padre .menu_nav a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .contenedor .h1_generico{
+        font-size: 22px;        
+    }
+
+    .contenedor .h2_generico{
+        font-size: 20px;
+    }
+
+    .contenedor .p_generico{
+        font-size: 12px;
+    }
+
+    footer .footer_padre .footer_info .h4_generico {
+        font-size: 16px;
+    }
+    
+    footer .footer_padre .footer_info .footer_link{
+        font-size: 14px;
+    }
+
+    footer .footer_padre .footer_social .h4_generico {
+        font-size: 16px;
+    }
+
+    footer .footer_padre .footer_social a{
+        font-size: 20px;
+    }
+    
+    footer .footer_padre .footer_social a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .contenedor .quienes_somos .contenedor_quienes_somos img{
+        width: 100%;    
+    }
+
+    .contenedor .quienes_somos .contenedor_objetivo img{
+        width: 100%;    
+    }
+
+}
+
+@media only screen and (min-width:600px){
+
+    header .header_padre .menu_nav a {
+        margin-right:40px;
+    }
+    
+    .contenedor .h1_generico{
+        font-size: 24px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 22px;
+    }
+
+    .contenedor .p_generico{
+        font-size: 14px;
+    }
+
+    .contenedor .quienes_somos .contenedor_quienes_somos img{
+        width: 100%;    
+    }
+
+    .contenedor .quienes_somos .contenedor_objetivo img{
+        width: 100%;    
+    }
+
+    footer .footer_padre .footer_info .h4_generico {
+        font-size: 16px;
+    }
+    
+    footer .footer_padre .footer_info .footer_link{
+        font-size: 14px;
+    }
+
+    footer .footer_padre .footer_social .h4_generico {
+        font-size: 16px;
+    }
+
+    footer .footer_padre .footer_social a{
+        font-size: 20px;
+    }
+    
+    footer .footer_padre .footer_social a:hover {
+        padding: 0px 0px 0px 0px;
+    }
+
+}
+
+@media only screen and (min-width:768px){
+
+    .contenedor .h1_generico{
+        font-size: 30px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 26px;
+    }
+
+}
+
+@media only screen and (min-width:992px){
+
+    header .header_padre .menu_nav a:hover {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .contenedor .h1_generico{
+        font-size: 34px;
+    }
+
+    .contenedor .h2_generico{
+        font-size: 30px;
+    }
+
+    .contenedor .quienes_somos .contenedor_quienes_somos img{
+        width: 100%;    
+    }
+
+    .contenedor .quienes_somos .contenedor_objetivo img{
+        width: 100%;    
+    }
+    
+}
+
+
+/* ------------------ MAIN TRABAJOS ------------------------- */
+
+.trabajos{
+
+    background: #f7f7f7;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: "manayou" "manahome"
+    "manastock" "manadeptor"
+    "manacredit" "manashop"
+    "manacomp" "none";
+
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;    
+
+    justify-content:space-between;
+    align-content: space-between;
+
+    text-align: center;
+
+}
+
+
+/* -------------- REGLAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO - TRABAJOS ---------------- */
+
+@media only screen and (max-width:600px){
+
+    
+    .trabajos{
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        text-align: center;
+
+    }
+
+    #hijo_uno{
+        grid-area:manayou;
+    }
+
+    #hijo_dos{
+        grid-area:manahome;
+    }
+
+    #hijo_tres{
+        grid-area:manastock;
+    }
+
+    #hijo_cuatro{
+        grid-area:manadeptor;
+    }
+
+    #hijo_cinco{
+        grid-area:manacredit;
+    }
+
+    #hijo_seis{
+        grid-area:manashop;
+    }
+
+    #hijo_siete{
+        grid-area:manacomp;
+    }
+
+}
+
+@media only screen and (min-width:600px){
+
+    .trabajos{
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        text-align: center;
+
+    }
+
+}
+
+@media only screen and (min-width:992px){
+
+    .trabajos{
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ------------------ MAIN BLOG ------------------------- */
+
+.actualidad{
+
+    background: #f7f7f7;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: "noticia1" "noticia2"
+    "noticia3" "noticia4";
+
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;    
+
+    justify-content:space-between;
+    align-content: space-between;
+
+    text-align: center;
+
+}
+
+.actualidad img{
+    width: 100%;
+}
+
+.contenedor_responsivo {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.iframe_responsivo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* -------------- REGLAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO - BLOG ---------------- */
+
+@media only screen and (max-width:768px){
+
+    .contenedor .h2_generico{
+        font-size: 25px;
+    }
+
+    .actualidad{
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        text-align: center;
+
+    }
+
+    #noticia1{
+        grid-area:noticia1;
+    }
+
+    #noticia2{
+        grid-area:noticia2;
+    }
+
+    #noticia3{
+        grid-area:noticia3;
+    }
+
+    #noticia4{
+        grid-area:noticia4;
+    }
+
+}
+
+@media only screen and (min-width:768px){
+
+
+    .actualidad{
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+
+        text-align: center;
+
+    }
+
+    #noticia1{
+        width: 90%
+    }
+
+    #noticia2{
+        width: 90%;
+    }
+
+    #noticia3{
+        width: 90%;
+    }
+
+    #noticia4{
+        width: 90%;
+    }
+
+}
+
+
+/* ------------------ MAIN CONTACTO ------------------------- */
+
+.contenedor .img_contacto img{
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+
+.contenedor .contacto .formulario {
+
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+}
+
+.contenedor .contacto .formulario .etiqueta_form {
+    font-size: 16px;
+    color: #BAD94A;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+.contenedor .contacto .formulario input{
+    display: block;
+}
+
+.contenedor .contacto .formulario input[type="text"],
+.contenedor .contacto .formulario input[type="email"],
+.contenedor .contacto .formulario textarea{
+    width: 60%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #BAD94A;
+    font-size: 16px;
+}
+
+.contenedor .contacto .formulario textarea{
+    min-height: 120px;
+    max-height: 300px;
+    width: 60%;
+}
+
+.contnedor .contacto .formulario input[type="text"]:focus,
+.contenedor .contacto .formulario input[type="email"]:focus,
+.contenedor .contacto .formulario textarea:focus{
+    border: 2px solid #03A64A;
+}
+
+.contenedor .contacto .formulario input[type="submit"] {
+    width: 200px;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #03A64A;
+    color: #03A64A;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+}
+
+.contenedor .contacto .formulario input[type="submit"]:hover {
+    background: #03A64A;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.contenedor .contacto .formulario input[type="reset"] {
+    width: 200px;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #03A64A;
+    color: #03A64A;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.contenedor .contacto .formulario input[type="reset"]:hover {
+    background: #03A64A;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.contenedor .mapa_responsivo {
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+    height:0;
+}
+
+.contenedor .mapa_responsivo iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+
+/* -------------- REGLAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO - CONTACTO ---------------- */
+
+@media only screen and (max-width:600px){
+
+    .contenedor .h1_generico{
+        font-size: 22px;
+    }
+
+    .contenedor .contacto .formulario .etiqueta_form {
+        font-size: 13px;
+    }
+
+
+    .contenedor .contacto .formulario input{
+        min-height: 20px;
+        max-height: 50px;
+    }
+
+    .contenedor .contacto .formulario input[type="text"],
+    .contenedor .contacto .formulario input[type="email"],
+    .contenedor .contacto .formulario textarea{
+    font-size: 13px;
+    }
+
+    .contenedor .contacto .formulario textarea{
+        min-height: 100px;
+        max-height: 280px;
+    }
+
+    .contenedor .contacto .formulario input[type="submit"] {
+        width: 100px;
+        font-size: 14px;
+    
+    }
+
+    .contenedor .contacto .formulario input[type="reset"] {
+        width: 100px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ------------------ MAIN TERMINOS Y CONDICIONES ------------------ */
+
+.terminos_condiciones{
+
+    margin-top:auto;
+
+    background: #f7f7f7;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
