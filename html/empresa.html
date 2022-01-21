@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>EMPRESA</title>
 </head>
 <body>
@@ -23,7 +26,7 @@
             <div class="header_padre">
 
                 <div class="logo_menu">
-                    <img src="../img/LOGO_ASC.png" alt="logo empresa">
+                    <img class="header_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
                 </div>   
 
                 <nav class="menu_nav">
@@ -46,15 +49,16 @@
         <!--PRINCIPAL EMPRESA-->
         <main>
 
-            <div>
+            <div class="gradiente">
                 <h1 class="h1_generico">NUESTRA EMPRESA</h1>
             </div>
 
             <section class="quienes_somos">
                 
                 <div class="contenedor_quienes_somos">
-
-                    <h2 class="h2_generico">¿Quiénes Somos?</h2>
+                    <div class="gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">¿Quiénes Somos?</h2>
+                    </div>
                     <img src="../img/quienes_somos1.jpg" alt="Quienes_Somos1">
                     <p class="p_generico">App Software Challenge (ASC Enterprise Ltda.) desarrolla aplicaciones móviles, web y para equipos de escritorio que de alguna manera puedan simplificar el diario vivir de sus usuarios, y agregarle un toque de entretenimiento.
                         Es un espacio al que puedes acceder desde tu teléfono móvil, tu tablet o computadora. Donde logres encontrar aquella aplicación de utilidad para tu pequeño y/o mediano negocio, recopilando información, y entregándote resultados sobre el mismo. También puedes encontrar aquella aplicación que te ayude, en tus actividades diarias, o esa aplicación que consiga entretenerte en los momentos de ocio y en lugares donde los tiempos de espera son prolongados.
@@ -66,8 +70,9 @@
                 </div>
                 
                 <div class="contenedor_objetivo">
-
-                    <h2 class="h2_generico">Nuestro Objetivo</h2>
+                    <div class="gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Nuestro Objetivo</h2>
+                    </div>
                     <img src="../img/quienes_somos2.jpg" alt="Quienes_Somos2">
                     <p class="p_generico">Brindar a nuestros clientes las herramientas necesarias para lograr una ventaja competitiva, optimizando los recursos existentes, maximizando su rentabilidad. El camino para ello es brindarles calidad en soluciones profesionales, esfuerzo, confianza, 
                         confidencialidad y atención personalizada.
@@ -91,7 +96,7 @@
                 </div>
 
                 <div class="footer_logo">
-                    <img src="../img/LOGO_ASC.png" alt="logo empresa" class="logo">
+                    <img class="footer_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa" class="logo">
                 </div>
 
                 <div class="footer_social">
@@ -106,6 +111,12 @@
             </div>
 
         </footer>
+
+        <script src="js/wow.min.js"></script>
+
+        <script>
+            new WOW().init();
+        </script>
 
     </div>
     

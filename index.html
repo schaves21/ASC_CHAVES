@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <title>ASC</title>
 </head>
 <body>
@@ -23,7 +26,7 @@
             <div class="header_padre">
 
                 <div class="logo_menu">
-                    <img src="img/LOGO_ASC.png" alt="logo empresa">
+                    <img class="header_transform_logo" src="img/LOGO_ASC.png" alt="logo empresa">
                 </div>   
 
                 <nav class="menu_nav">
@@ -47,7 +50,7 @@
         <main>
 
             <!--  TITULO PRINCIPAL -->
-            <div>
+            <div class="gradiente">
                 <h1 class="h1_generico">BIENVENIDOS A APP SOFTWARE CHALLENGE</h1>
             </div>
             
@@ -56,19 +59,25 @@
         
                 <div class="img_info_asc">
                     <img src="img/foto1_main.jpg" alt="foto1_main">
-                    <h2 class="h2_generico">Nuestro Desafío</h2>
+                    <div class="gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Nuestro Desafío</h2>
+                    </div>
                     <p class="p_generico">Es brindarle a nuestros clientes soluciones tecnógicas,
                         trabajando de forma multidisciplinaria en diferentes áreas informáticas.
                     </p>
                 </div>
                 <div class="img_info_asc">
                     <img src="img/foto2_main.jpg" alt="foto2_main">
-                    <h2 class="h2_generico">Nuestros Valores</h2>
+                    <div class="gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Nuestros Valores</h2>
+                    </div>
                     <p class="p_generico">La transparencia, vacación de servicio, ética profesional y eficacia en nuestros trabajos.</p>
                 </div>
                 <div class="img_info_asc">
                     <img src="img/foto3_main.jpg" alt="foto3_main">
-                    <h2 class="h2_generico">Nuestro Enfoque</h2>
+                    <div class="gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Nuestro Enfoque</h2>
+                    </div>  
                     <p class="p_generico">Énfasis en la mejora contínua.</p>
                 </div> 
 
@@ -76,8 +85,8 @@
     
 
             <!--  SECTION TRABAOS -->
-            <div>
-                <h2 class="h2_generico">Trabajos</h2>
+            <div class="gradiente">
+                <h2 class="h2_generico animate__animated animate__backInLeft">Trabajos</h2>
             </div>
 
             <section class="galeria_padre">
@@ -127,7 +136,7 @@
                 </div>
 
                 <div class="footer_logo">
-                    <img src="img/LOGO_ASC.png" alt="logo empresa" class="logo">
+                    <img class="footer_transform_logo" src="img/LOGO_ASC.png" alt="logo empresa" class="logo">
                 </div>
 
                 <div class="footer_social">
@@ -142,6 +151,12 @@
             </div>
 
         </footer>
+
+        <script src="js/wow.min.js"></script>
+
+        <script>
+            new WOW().init();
+        </script>
 
     </div>
 

@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>BLOG</title>
 </head>
 <body>
@@ -23,7 +26,7 @@
             <div class="header_padre">
 
                 <div class="logo_menu">
-                    <img src="../img/LOGO_ASC.png" alt="logo empresa">
+                    <img class="header_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
                 </div>   
 
                 <nav class="menu_nav">
@@ -46,14 +49,16 @@
         <!--PRINCIPAL BLOG-->
         <main>
 
-            <div>
+            <div class="gradiente">
                 <h1 class="h1_generico">BLOG</h1>
             </div>
 
             <section class="actualidad">
 
                 <article id="noticia1">
-                    <h2 class="h2_generico">¿Qué es Google Fuchsia?</h2>
+                    <div class="ellipse_gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">¿Qué es Google Fuchsia?</h2>
+                    </div>
                     <img src="../img/noticia1.jpg" alt="Noticia1">
                     <p class="p_generico">Fuchsia es un nuevo proyecto aparecido en los repositorios Git de Google. En uno de los documentos del repositorio aparece la descripción que ha vuelto loca a la red: "Rosa + Púrpura == Fucsia (un nuevo Sistema Operativo)". 
                         Vamos, que aunque aún no sabemos cual va a ser su finalidad, queda claro que Google ha empezado a desarrollar un nuevo sistema operativo. Navegando entre los repositorios nos encontramos una referencia al Kernel que utilizará: Magenta. 
@@ -66,7 +71,9 @@
                 </article>
             
                 <article id="noticia2">
-                    <h2 class="h2_generico">Primer SMS de la historia, subastado como NFT por 500 millones de pesos</h2>
+                    <div class="ellipse_gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Primer SMS de la historia, subastado como NFT por 500 millones de pesos</h2>
+                    </div>
                     <div class="contenedor_responsivo">
                         <iframe class="iframe_responsivo" width="770" height="433" src="https://www.youtube.com/embed/kfAqXhGHtG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>    
@@ -75,7 +82,9 @@
                 </article>
 
                 <article id="noticia3">
-                    <h2 class="h2_generico">Herramientas de Google para que haya más mujeres líderes en la tecnología</h2>
+                    <div class="ellipse_gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Herramientas de Google para que haya más mujeres líderes en la tecnología</h2>  
+                    </div>
                     <img src="../img/noticia3.jpg" alt="Noticia3">
                     <p class="p_generico">La mayoría de quienes ocupan puestos en el área son hombres, pues históricamente las jóvenes han quedado de lado. Google está consciente de que aún queda un largo camino por recorrer para las mujeres en el área de la tecnología, en donde históricamente son una minoría, 
                         por lo que para comenzar a revertir el escenario está empleando algunas herramientas de apoyo. Primero cabe mencionar que consultora Michael Page revisada por Google, encontró que la disparidad de géneros inicia antes de llegar al área laboral de tecnología, 
@@ -87,7 +96,9 @@
                 </article>
 
                 <article id="noticia4">
-                    <h2 class="h2_generico">Anime gratis los dibujos de sus hijos con la Inteligencia Artificial de Meta</h2>
+                    <div class="ellipse_gradiente">
+                        <h2 class="h2_generico animate__animated animate__backInLeft">Anime gratis los dibujos de sus hijos con la Inteligencia Artificial de Meta</h2>
+                    </div>
                     <img src="../img/noticia4.jpg" alt="Noticia3">
                     <p class="p_generico">La empresa antes conocida como Facebook lanzó una opción para darle vida a dibujos hechos a mano por niños, no obstante, los adultos también pueden usarlo. Meta, matriz de Facebook, Instagram y WhasApp creó un método que usa Inteligencia Artificial (IA) para animar dibujos. 
                         Aunque tiene un enfoque familiar para que padres y madres los usen con sus hijos e hijas, puede funcionar para cualquier persona interesada en el proceso de animación. Según explica Meta, nació como un proyecto pensado para que los personajes imaginativos de los niños cobren vida y puedan ver cómo se convierten en una caricatura que puede brincar, bailar y correr. Mientras que a las personas les resulta fácil reconocer los dibujos, 
@@ -112,7 +123,7 @@
                 </div>
 
                 <div class="footer_logo">
-                    <img src="../img/LOGO_ASC.png" alt="logo empresa" class="logo">
+                    <img class="footer_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa" class="logo">
                 </div>
 
                 <div class="footer_social">
@@ -127,6 +138,12 @@
             </div>
 
         </footer>
+
+        <script src="js/wow.min.js"></script>
+
+        <script>
+            new WOW().init();
+        </script>
 
     </div>
 
