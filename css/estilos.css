@@ -139,14 +139,6 @@ header .logo_menu{
     margin-bottom: 10px;
 }
 
-
-/*
-header .logo_menu .header_transform_logo{
-
-    transform: rotate(-10deg);
-}
-*/
-
 header nav{
     margin: auto 10px;
 }
@@ -191,13 +183,6 @@ footer {
 
     padding: 20px 0;
 }
-
-/* ----------- TRANSFORMACION DEL LOGO ----------------------------- */
-/*
-footer .footer_transform_logo{
-    transform: rotate(-5deg);
-}
-*/
 
 footer .footer_padre{
     display: flex;
@@ -268,15 +253,6 @@ footer .footer_padre .footer_social a:hover {
 
 }
 
-/* -------------- H5 PARA CARD DE TRABAJOS -------------------- */
-.contenedor .h5_card {
-
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-
-}
-
 /* -------------- PROPIEDADES PARA EL CONTENEDOR ROW DE TRABAJOS -------------------- */
 .contenedor .row {
     margin: 0;
@@ -285,6 +261,15 @@ footer .footer_padre .footer_social a:hover {
 /* -------------- PROPIEDADES PARA EL CONTENEDOR CARD DE TRABAJOS -------------------- */
 .contenedor .card{
     margin: 10px 10px 10px 10px;
+}
+
+/* -------------- H5 PARA CARD DE TRABAJOS -------------------- */
+.contenedor .h5_card {
+
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+
 }
 
 /* -------------- PARRAFO PARA CARD DE TRABAJOS -------------------- */
@@ -315,7 +300,6 @@ footer .footer_padre .footer_social a:hover {
 
 }
 
-
 /* -------------- PARRAFO PARA CARD EMPRESA -------------------- */
 .contenedor .p_card_empresa {
 
@@ -326,86 +310,61 @@ footer .footer_padre .footer_social a:hover {
 
 }
 
-
 /* ------------------ MAIN TRABAJOS ------------------------- */
-
-.trabajos{
-
-    background: #f7f7f7;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-
-    grid-template-areas: "manayou" "manahome"
-    "manastock" "manadeptor"
-    "manacredit" "manashop"
-    "manacomp" "none";
-
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;    
-
-    justify-content:space-between;
-    align-content: space-between;
-
-    text-align: center;
-
-}
 
 /* ----------- GRADIENTE EN H2 ----------------------------- */
 .radial_gradiente{
     background-image: radial-gradient(circle, #5A3673, #03A64A);
 }
 
+/* -------------- H5 PARA CARD DE TRABAJOS -------------------- */
+.contenedor .h5_card_trabajo {
+
+    font-size: 18px;
+    color: #BAD94A;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+/* -------------- PARRAFO PARA CARD DE TRABAJOS -------------------- */
+.contenedor .p_card_trabajo {
+
+    font-size: 16px;
+    color: gray;
+    font-weight: bold;
+    text-align: justify;
+
+}
+
 
 /* ------------------ MAIN BLOG ------------------------- */
-
-.actualidad{
-
-    background: #f7f7f7;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
-
-    grid-template-areas: "noticia1" "noticia2"
-    "noticia3" "noticia4";
-
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;    
-
-    text-align: center;  
-
-}
-
-#noticia1{
-    padding: auto 10px;
-    justify-self: center;
-}
-
-#noticia2{
-    padding: auto 10px;
-    justify-self: center;
-}
-
-#noticia3{
-    padding: auto 10px;
-    justify-self: center;
-}
-
-#noticia4{
-    padding: auto 10px;
-    justify-self: center;
-}
-
 
 /* ----------- GRADIENTE EN H2 ----------------------------- */
 .ellipse_gradiente{
     background-image: radial-gradient(ellipse, #03A64A, #5A3673);
 }
 
-.actualidad img{
-    width: 100%;
+/* -------------- H5 PARA CARD DEL BLOG -------------------- */
+.contenedor .h5_card_blog {
+
+    font-size: 18px;
+    color: #BAD94A;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+/* -------------- PARRAFO PARA CARD DEL BLOG -------------------- */
+.contenedor .p_card_blog {
+
+    font-size: 16px;
+    color: gray;
+    font-weight: bold;
+    text-align: justify;
+
 }
 
 .contenedor_responsivo {
@@ -424,6 +383,9 @@ footer .footer_padre .footer_social a:hover {
 }
 
 /* ------------------ MAIN CONTACTO ------------------------- */
+.contenedor .contenedor_contacto{
+    margin-bottom: 10px;
+}
 
 .contenedor .img_contacto img{
     height: auto;
@@ -432,100 +394,14 @@ footer .footer_padre .footer_social a:hover {
     margin-bottom: 20px;    
 }
 
-.contenedor .contacto .formulario {
-
-    width: 98%;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-
-}
-
-.contenedor .contacto .formulario .etiqueta_form{
-    font-size: 16px;
+.contenedor .contenedor_contacto label{
+    font-size: 18px;
     color: #BAD94A;
     font-weight: bold;
-    line-height: 34px;
 }
 
-/* ----------- TRANSICION EN INPUT ----------------------------- */
-.contenedor .contacto .formulario input{
-    /*display: block;*/
-    transition: all 2s;       
-}
-
-/* ----------- TRANSICION EN TEXTAREA -------------------------- */
-.contenedor .contacto .formulario textarea{
-    min-height: 120px;
-    max-height: 300px;
-    width: 60%;
-    transition: all 2s;
-}
-
-.contenedor .contacto .formulario input[type="text"],
-.contenedor .contacto .formulario input[type="email"],
-.contenedor .contacto .formulario textarea{
-    width: 60%;
-    padding: 20px;
+.contenedor .contenedor_contacto .row{
     margin-bottom: 20px;
-    border-radius: 3px;
-    border: 1px solid #BAD94A;
-    font-size: 16px;
-}
-
-.contenedor .contacto .formulario input:focus{
-    height: 80px;
-    border: 3px solid #BAD94A;
-}
-
-.contenedor.contacto .formulario textarea:focus{
-    border: 3px solid #BAD94A; 
-}
-
-.contenedor .contacto .formulario input[type="submit"] {
-    width: 200px;
-    margin: 0 auto;
-    background: none;
-    border: 1px solid #03A64A;
-    color: #03A64A;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 3px;
-    margin-bottom: 10px;
-
-}
-
-.contenedor .contacto .formulario input[type="submit"]:hover {
-    background: #03A64A;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 3px;
-}
-
-.contenedor .contacto .formulario input[type="reset"] {
-    width: 200px;
-    margin: 0 auto;
-    background: none;
-    border: 1px solid #03A64A;
-    color: #03A64A;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-}
-
-.contenedor .contacto .formulario input[type="reset"]:hover {
-    background: #03A64A;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 3px;
 }
 
 .contenedor .mapa_responsivo {
@@ -588,52 +464,10 @@ footer .footer_padre .footer_social a:hover {
     footer .footer_padre .footer_social a:hover {
         padding: 0px 0px 0px 0px;
     }
-
-    .trabajos{
-
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    
-    }
-
-    #hijo_uno{
-        grid-area: manayou;
-    }
-    
-    #hijo_dos{
-        grid-area: manahome;
-    }
-    
-    #hijo_tres{
-        grid-area: manastock;
-    }
-    
-    #hijo_cuatro{
-        grid-area: manadeptor;
-    }
-    
-    #hijo_cinco{
-        grid-area: manacredit;
-    }
-    
-    #hijo_seis{
-        grid-area: manashop;
-    }
-    
-    #hijo_siete{
-        grid-area: manacomp;
-    }
     
 }
 
 @media only screen and (min-width:600px){
-
-    .trabajos{
-
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    
-    }
 
     footer .footer_padre{
         flex-direction: column;
@@ -641,71 +475,8 @@ footer .footer_padre .footer_social a:hover {
 
 }
 
-@media only screen and (max-width:768px){
-
-    .actualidad{
-
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    }
-
-}
-
-
-@media only screen and (min-width:768px){
-
-    .trabajos{
-
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;    
-    
-    }
-
-    #hijo_uno{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_dos{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_tres{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_cuatro{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_cinco{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_seis{
-        border: 1px solid #5A3673;
-    }
-    
-    #hijo_siete{
-        border: 1px solid #5A3673;
-    }
-
-}
 
 @media only screen and (min-width:992px){
-
-    .trabajos{
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
-
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;    
-    
-    }
 
     footer .footer_padre{
         flex-direction: row;
