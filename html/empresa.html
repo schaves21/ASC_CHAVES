@@ -10,9 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>EMPRESA</title>
 </head>
 <body>
@@ -23,82 +22,89 @@
         <!--CABECERA EMPRESA-->
         <header>
 
-            <div class="header_padre">
+            <!-- CONTENEDOR DEL LOGO -->
+            <div class="logo_menu">
+                <img class="header_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
+            </div>   
 
-                <div class="logo_menu">
-                    <img class="header_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
-                </div>   
-
-                <nav class="menu_nav">
-
-                    <a href="../index.html">HOME</a>
-
-                    <a href="empresa.html">EMPRESA</a>
-
-                    <a href="trabajos.html">TRABAJOS</a>
-
-                    <a href="blog.html">BLOG</a>
-
-                    <a href="contacto.html">CONTACTO</a>
-                </nav>
-                
-            </div>
+            <!-- MENU DE NAVEGACION -->
+            <nav>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="empresa.html">EMPRESA</a></li>
+                    <li><a href="trabajos.html">TRABAJOS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>   
+            </nav>  
 
         </header>
         
         <!--PRINCIPAL EMPRESA-->
         <main>
 
+            <!--  TITULO PRINCIPAL -->
             <div class="gradiente">
                 <h1 class="h1_generico">NUESTRA EMPRESA</h1>
             </div>
 
-            <section class="quienes_somos">
-                
-                <div class="contenedor_quienes_somos">
-                    <div class="gradiente">
-                        <h2 class="h2_generico animate__animated animate__backInLeft">¿Quiénes Somos?</h2>
+            <!--COMPONENTE CARD APLICADO CON BOOTSTRAP-->
+            <div class="card mb-3 border-success" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../img/quienes_somos1.jpg" class="img-fluid rounded-start" alt="Quienes somos">
                     </div>
-                    <img src="../img/quienes_somos1.jpg" alt="Quienes_Somos1">
-                    <p class="p_generico">App Software Challenge (ASC Enterprise Ltda.) desarrolla aplicaciones móviles, web y para equipos de escritorio que de alguna manera puedan simplificar el diario vivir de sus usuarios, y agregarle un toque de entretenimiento.
-                        Es un espacio al que puedes acceder desde tu teléfono móvil, tu tablet o computadora. Donde logres encontrar aquella aplicación de utilidad para tu pequeño y/o mediano negocio, recopilando información, y entregándote resultados sobre el mismo. También puedes encontrar aquella aplicación que te ayude, en tus actividades diarias, o esa aplicación que consiga entretenerte en los momentos de ocio y en lugares donde los tiempos de espera son prolongados.
-                        App Software Challenge (ASC Enterprise Ltda.) es una empresa en desarrollo, privada e independiente, ubicada en Uruguay. Fundada en el año 2015, y apuntando al crecimiento constante.
-                        Nuestra misión, es proporcionar la solución y divertimento de los usuarios de nuestros productos a través del desarrollo de aplicaciones, principalmente móviles, donde también puedan interactuar con sus propios clientes.
-                        Nuestra Visión, es ser la empresa desarrolladora de herramientas informáticas que logre cumplir con el objetivo de utilidad, entretenimiento, y solución para el diario vivir dentro de la globalidad en la que vivimos.
-                    </p>
-
-                </div>
-                
-                <div class="contenedor_objetivo">
-                    <div class="gradiente">
-                        <h2 class="h2_generico animate__animated animate__backInLeft">Nuestro Objetivo</h2>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="h2_card_empresa">¿Quiénes Somos?</h2>
+                            <p class="p_card_empresa">App Software Challenge (ASC Enterprise Ltda.) desarrolla aplicaciones móviles, web y para equipos de escritorio que de alguna manera puedan simplificar el diario vivir de sus usuarios, y agregarle un toque de entretenimiento.</p>
+                            <p class="p_card_empresa">Es un espacio al que puedes acceder desde tu teléfono móvil, tu tablet o computadora. Donde logres encontrar aquella aplicación de utilidad para tu pequeño y/o mediano negocio, recopilando información, y entregándote resultados sobre el mismo. También puedes encontrar aquella aplicación que te ayude, en tus actividades diarias, o esa aplicación que consiga entretenerte en los momentos de ocio y en lugares donde los tiempos de espera son prolongados.</p> 
+                            <p class="p_card_empresa">App Software Challenge (ASC Enterprise Ltda.) es una empresa en desarrollo, privada e independiente, ubicada en Uruguay. Fundada en el año 2015, y apuntando al crecimiento constante.</p>    
+                            <p class="p_card_empresa">Nuestra misión, es proporcionar la solución y divertimento de los usuarios de nuestros productos a través del desarrollo de aplicaciones, principalmente móviles, donde también puedan interactuar con sus propios clientes.</p>    
+                            <p class="p_card_empresa">Nuestra Visión, es ser la empresa desarrolladora de herramientas informáticas que logre cumplir con el objetivo de utilidad, entretenimiento, y solución para el diario vivir dentro de la globalidad en la que vivimos.</p> 
+                        </div>
                     </div>
-                    <img src="../img/quienes_somos2.jpg" alt="Quienes_Somos2">
-                    <p class="p_generico">Brindar a nuestros clientes las herramientas necesarias para lograr una ventaja competitiva, optimizando los recursos existentes, maximizando su rentabilidad. El camino para ello es brindarles calidad en soluciones profesionales, esfuerzo, confianza, 
-                        confidencialidad y atención personalizada.
-                    </p>
-
                 </div>
+            </div>
 
-            </section>
-            
+            <!--COMPONENTE CARD APLICADO CON BOOTSTRAP-->
+            <div class="card mt-4 border-success" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../img/quienes_somos2.jpg" class="img-fluid rounded-start" alt="Quienes somos">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="h2_card_empresa">Nuestro Objetivo</h2>
+                            <p class="p_card_empresa">Brindar a nuestros clientes las herramientas necesarias para lograr una ventaja competitiva, optimizando los recursos existentes, maximizando su rentabilidad.</p> 
+                            <p class="p_card_empresa"> El camino para ello es brindarles calidad en soluciones profesionales, esfuerzo, confianza, 
+                                confidencialidad y atención personalizada.</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
         </main>
 
         <!--PIE DE PAGINA EMPRESA-->
         <footer>
 
+            <!--  DIV HIJO DEL FOOTER -->
             <div class="footer_padre">
             
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_info">
                     <h4 class="h4_generico">Información</h4>
                     <a class="footer_link" href="condiciones.html">CONDICIONES</a>
                     <a class="footer_link" href="contacto.html">CONTACTO</a>
                 </div>
-
+                
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_logo">
-                    <img class="footer_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa" class="logo">
+                    <img class="footer_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
                 </div>
 
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_social">
 
                     <h4 class="h4_generico">Síguenos en:</h4>
@@ -112,10 +118,19 @@
 
         </footer>
 
-        <script src="js/wow.min.js"></script>
+        <!--  SCRIPT PARA WOW -->
+        <script 
+            src="js/wow.min.js">
+        </script>
 
+        <!--  SCRIPT PARA WOW -->
         <script>
             new WOW().init();
+        </script>
+
+        <!--  SCRIPT PARA BOOTSTRAP -->
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
 
     </div>
