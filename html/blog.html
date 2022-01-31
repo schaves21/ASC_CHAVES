@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shorcut icon" type="image/x-icon" href="../img/favicon_ASC.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>BLOG</title>
@@ -22,103 +18,144 @@
         <!--CABECERA BLOG-->
         <header>
 
-            <!--  CONTENEDOR DEL LOGO -->
-            <div class="logo_menu">
-                <img class="header_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
-            </div>   
-
             <!--  MENU DE NAVEGACION -->
             <nav>
-                <ul>
+
+                <!--  CONTENEDOR DEL LOGO -->
+                <div>
+                    <img src="../img/LOGO_ASC.png" alt="logo empresa" class="logo_menu">
+                </div> 
+
+                <input type="checkbox" id="check">
+                <label for="check" class="bar_btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <ul class="nav_menu">
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="empresa.html">EMPRESA</a></li>
                     <li><a href="trabajos.html">TRABAJOS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a class="active" href="blog.html">BLOG</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>   
-            </nav> 
+                </ul> 
+
+            </nav>  
+
+            <!--  TITULO PRINCIPAL -->
+            <div class="div_h1_generico">
+                <h1>BIENVENIDOS A APP SOFTWARE CHALLENGE</h1>
+            </div>
 
         </header>
         
         <!--PRINCIPAL BLOG-->
         <main>
 
-            <!--  TITULO DEL BLOG -->
-            <div class="gradiente">
-                <h1 class="h1_generico">BLOG</h1>
-            </div>
+            <section class="blog">
 
-
-            <!--  SECTION BLOG APLICADO CON BOOTSTRAP -->
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="card mb-3 text-center border-success" style="width: 18rem;">
-                    <img src="../img/noticia1.jpg" class="card-img-top" alt="Noticia">
-                    <div class="card-body">
-                        <h5 class="h5_card_blog">¿Qué es Google Fuchsia?</h5>
-                        <p class="p_card_blog">Fuchsia es un nuevo proyecto aparecido en los repositorios Git de Google. En uno de los documentos del repositorio aparece la descripción que ha vuelto loca a la red: "Rosa + Púrpura == Fucsia (un nuevo Sistema Operativo)". 
-                            Vamos, que aunque aún no sabemos cual va a ser su finalidad, queda claro que Google ha empezado a desarrollar un nuevo sistema operativo. Navegando entre los repositorios nos encontramos una referencia al Kernel que utilizará: Magenta. 
-                        </p>
-                        <p class="p_card_blog"> Está basado en LK (LittleKernel), un microkernel diseñado para el Internet de las Cosas, pero en la documentación podemos leer que sólo es una base sobre la que están creando muchas más capas propias. 
-                            Esto quiere decir que el Kernel Magenta será mucho más avanzado y tendrá más funciones que LittleKernel. Siendo el Kernel el motor principal de un sistema operativo, y viendo que por primera vez Google no está basándose en Linux como hace con Android y Chrome OS, 
-                            esto supone que en este nuevo proyecto tendrán un control aún mayor sobre todas y cada una de las operaciones que realizará el sistema operativo debajo del capó.
-                        </p>
-                        <p class="p_card_blog">En un principio no nos queríamos emocionar pensando que, al basarse en un Kernel dirigido al IoT, Fuchsia también podría estar orientado a ese tipo de usos. 
-                            Pero en la documentación leemos claramente que el Kernel Magenta está dirigido a los teléfonos y ordenadores personales modernos con procesadores rápidos.
-                        </p> 
-                        <p class="p_card_blog">Por último, el lenguaje de programación principal de este nuevo operativo será Dart, uno propio de Google. También soporta Flutter para crear su UI, 
-                            lo que quiere decir que Google parece tener esperanzas de darle una interfaz basada en las líneas de diseño de Material Design, las mismas que utiliza en Android y lleva a Chrome. 
-                        </p> 
-                    </div>
+                <div class="gradiente">
+                    <h2 class="h2_gradiente">BLOG</h2>
                 </div>
 
-                <div class="card text-center border-success" style="width: 18rem;">
-                    <div class="contenedor_responsivo">
-                        <iframe class="iframe_responsivo" width="770" height="433" src="https://www.youtube.com/embed/kfAqXhGHtG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div> 
-                    <div class="card-body">
-                        <h5 class="h5_card_blog">Primer SMS de la historia, subastado como NFT por 500 millones de pesos</h5>
-                        <p class="p_card_blog">El mensaje fue vendido el martes como NFT por 107.000 euros (más de 120.000 dólares) en una venta organizada por la casa Aguttes en Francia.</p>
+                <!--NOTICIAS DEL BLOG APLICADO CON ROWS DE BOOTSTRAP-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row foto">
+                                <div class="col-sm-4 imagen">
+                                    <img class="img-responsive" src="../img/noticia1.jpg" alt="Noticia">
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="ellipse_gradiente">
+                                        <h2 class="h2_blog animate__animated animate__backInLeft">¿Qué es Google Fuchsia?</h2>
+                                    </div>
+                                    <p class="p_texto_blog">Fuchsia es un nuevo proyecto aparecido en los repositorios Git de Google. En uno de los documentos del repositorio aparece la descripción que ha vuelto loca a la red: "Rosa + Púrpura == Fucsia (un nuevo Sistema Operativo)".</p>
+                                    <p class="p_texto_blog">Vamos, que aunque aún no sabemos cual va a ser su finalidad, queda claro que Google ha empezado a desarrollar un nuevo sistema operativo. Navegando entre los repositorios nos encontramos una referencia al Kernel que utilizará: Magenta.</p>  
+                                    <p class="p_texto_blog">Está basado en LK (LittleKernel), un microkernel diseñado para el Internet de las Cosas, pero en la documentación podemos leer que sólo es una base sobre la que están creando muchas más capas propias. Esto quiere decir que el Kernel Magenta será mucho más avanzado
+                                        y tendrá más funciones que LittleKernel.
+                                    </p>  
+                                    <p class="p_texto_blog">Siendo el Kernel el motor principal de un sistema operativo, y viendo que por primera vez Google no está basándose en Linux como hace con Android y Chrome OS, esto supone que en este nuevo proyecto tendrán un control aún mayor sobre todas
+                                        y cada una de las operaciones que realizará el sistema operativo debajo del capó.
+                                    </p>    
+                                    <p class="p_texto_blog">En un principio no nos queríamos emocionar pensando que, al basarse en un Kernel dirigido al IoT, Fuchsia también podría estar orientado a ese tipo de usos. Pero en la documentación leemos claramente que el Kernel Magenta está dirigido a los teléfonos
+                                         y ordenadores personales modernos con procesadores rápidos. Por último, el lenguaje de programación principal de este nuevo operativo será Dart, uno propio de Google. 
+                                    </p>
+                                    <p class="p_texto_blog">También soporta Flutter para crear su UI, lo que quiere decir que Google parece tener esperanzas de darle una interfaz basada en las líneas de diseño de Material Design, las mismas que utiliza en Android y lleva a Chrome.</p>        
+                                </div>
+                            </div>
+
+                            <div class="row foto">
+                                <div class="col-sm-8">
+                                    <div class="ellipse_gradiente">
+                                        <h2 class="h2_blog animate__animated animate__backInLeft">Apple presenta una guía de seguridad para AirTags en medio de temores por acosadores</h2>
+                                    </div>
+                                    <p class="p_texto_blog">La compañía lanzó silenciosamente el portal de seguridad el lunes. La Guía de Seguridad Personal del Usuario ofrece consejos sobre cómo las personas pueden mantenerse seguras y proteger sus datos.</p> 
+                                    <p class="p_texto_blog">Los AirTags están diseñados para localizar artículos perdidos usando la poderosa red "Encontrar" de Apple.</p> 
+                                    <p class="p_texto_blog">Son pequeños dispositivos en forma de botón que se pueden colocar en las llaves o en la cartera.</p>
+                                    <p class="p_texto_blog">Sin embargo, la BBC y otros medios encontraron previamente evidencia de que los AirTags se usaron indebidamente para rastrear personas.</p>
+                                </div>
+                                <div class="col-sm-4 imagen">
+                                    <img class="img-responsive" src="../img/Noticia2.jpg" alt="Noticia">
+                                </div>
+                            </div>
+
+                            <div class="row foto">
+                                <div class="col-sm-4 imagen">
+                                    <img class="img-responsive" src="../img/noticia3.jpg" alt="Noticia">
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="ellipse_gradiente">
+                                        <h2 class="h2_blog animate__animated animate__backInLeft">Qué es el "apocalipsis cuántico" (y qué tanto puede amenazar nuestra forma de vida)</h2>
+                                    </div>
+                                    <p class="p_texto_blog">Imagina un mundo en el que los archivos secretos cifrados se abren repentinamente, algo conocido como "el apocalipsis cuántico".</p> 
+                                    <p class="p_texto_blog">En pocas palabras, las computadoras cuánticas funcionan de manera completamente diferente a las computadoras desarrolladas durante el siglo pasado. 
+                                        En teoría, eventualmente podrían volverse mucho más rápidas que las máquinas actuales.
+                                    </p> 
+                                    <p class="p_texto_blog">Eso significa que frente a un problema increíblemente complejo y lento, como tratar de descifrar datos, donde hay múltiples permutaciones que llegan a los miles de millones, 
+                                        una computadora normal tardaría muchos años en descifrar esos cifrados, si es que alguna vez lo logra.
+                                    </p>
+                                    <p class="p_texto_blog">Pero una futura computadora cuántica, en teoría, podría hacer esto en solo segundos.</p>
+                                    <p class="p_texto_blog">Tales computadoras podrían ser capaces de resolver todo tipo de problemas para la humanidad. El gobierno de Reino Unido está invirtiendo en el Centro Nacional de Computación Cuántica en Harwell,
+                                         Oxfordshire, con la esperanza de revolucionar la investigación en este campo.
+                                    </p>      
+                                </div>
+                            </div>
+
+                            <div class="row foto">
+                                <div class="col-sm-8">
+                                    <div class="ellipse_gradiente">
+                                        <h2 class="h2_blog animate__animated animate__backInLeft">Nos estamos perdiendo la vida real”: la gente que decide deshacerse de su teléfono inteligente</h2>
+                                    </div>
+                                    <p class="p_texto_blog">En un mundo en el que muchos vivimos pegados a nuestros teléfonos inteligentes, Dulcie Cowling es una especie rara: se ha deshecho del suyo.</p> 
+                                    <p class="p_texto_blog">Esta mujer de 36 años decidió a finales del año pasado que dejar de lado su smartphone mejoraría su salud mental.</p> 
+                                    <p class="p_texto_blog">En Navidad, les dijo a su familia y amigos que lo iba a cambiar por un viejo Nokia con el que solo podría hacer y recibir llamadas y mensajes de texto.</p>
+                                    <p class="p_texto_blog">Recuerda que uno de los momentos cruciales que la llevaron a tomar tal decisión fue un día en el parque con sus dos hijos, de 6 y 3 años.</p>
+                                    <p class="p_texto_blog">"Estaba en el parque, con los niños, mirando absorta el móvil. Cuando levanté la vista todos los padres —hasta 20—, estaban mirando sus teléfonos, 
+                                        deslizando continuamente el dedo por la pantalla", cuenta.
+                                    </p>
+                                    <p class="p_texto_blog">"¿En qué momento nos pasó esto?', pensé. Nos estamos perdiendo la vida real. 
+                                        No creo que en tu lecho de muerte lamentes no haber pasado más tiempo en Twitter o leyendo artículos en internet".
+                                    </p> 
+                                    <p class="p_texto_blog">Cowling, que es directora creativa de Hell Yeah!, una agencia de publicidad con sede en Londres, 
+                                        agrega que la idea de abandonar su teléfono inteligente fue desarrollándose a medida que avanzaban los confinamientos por la pandemia de covid.
+                                    </p>  
+                                    <p class="p_texto_blog">"Pensé en cuánto tiempo de mi vida paso mirando el teléfono y qué más podría hacer. 
+                                        Estar constantemente conectados a muchos servicios nos crea muchas distracciones y es mucho para que el cerebro procese".
+                                    </p>
+                                    <p class="p_texto_blog">Aproximadamente nueve de cada 10 personas en Reino Unido poseen un smartphone, una cifra ampliamente replicada en todo el mundo desarrollado. 
+                                        Y estamos pegados a ellos: un estudio reciente encontró que una persona promedio pasa 4,8 horas al día en su teléfono.
+                                    </p> 
+                                    <p class="p_texto_blog">Sin embargo, para un pequeño pero creciente número de personas, ya ha sido más que suficiente.</p> 
+                                </div>
+                                <div class="col-sm-4 imagen">
+                                    <img class="img-responsive" src="../img/Noticia4.jpg" alt="Noticia">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-
-                <div class="card text-center border-success" style="width: 18rem;">
-                    <img src="../img/noticia3.jpg" class="card-img-top" alt="Noticia">
-                    <div class="card-body">
-                        <h5 class="h5_card_blog">Herramientas de Google para que haya más mujeres líderes en la tecnología</h5>
-                        <p class="p_card_blog">La mayoría de quienes ocupan puestos en el área son hombres, pues históricamente las jóvenes han quedado de lado. Google está consciente de que aún queda un largo camino por recorrer para las mujeres en el área de la tecnología, 
-                            en donde históricamente son una minoría, por lo que para comenzar a revertir el escenario está empleando algunas herramientas de apoyo.
-                        </p>
-                        <p class="p_card_blog">Primero cabe mencionar que consultora Michael Page revisada por Google, encontró que la disparidad de géneros inicia antes de llegar al área laboral de tecnología, 
-                            pues desde las escuelas son menos estudiantes mujeres que hombres las que cursan una ingeniería o ciencias aplicadas. De esa minoría, en Argentina solo el 25% escoge el área, mientras que en México solo el 8% lo hace. Lo cual, 
-                            al mismo tiempo provoca que la falta de modelos femeninos en el área desaliente a otras a integrarse. Lo anterior se suma a la autoexigencia de las mujeres a la hora de postularse a un puesto. 
-                        </p>
-                        <p class="p_card_blog">Las cifras indican que se postulan menos (20%) que los hombres porque entienden que deben cumplir con el 100% de los requisitos solicitados. Por otro lado, los hombres se postulan a puestos de trabajo para los que cumplen solo con el 60% de los requisitos. 
-                            En ese sentido, es que Google, también al estar consciente de que los equipos diversos generan más soluciones y tienen mayor potencial, genera nuevas oportunidades enfocadas a las mujeres. 
-                        </p>
-                        <p class="p_card_blog">Crece con Google es un programa gratuito de formación profesional que este 2021, durante el mes del Día Internacional de la Mujer hizo una celebración para Latinoamérica en la que 90 mil mujeres participaron para ser capacitadas y empoderadas en habilidades digitales y empresariales, 
-                            ciberseguridad, liderazgo y autopromoción. A través de una campaña de marketing que reunió a 60 influencers mujeres de México y Argentina, para realizar en cada país una adaptación de la película Hero, que incluyó videos de las primeras mujeres locales en liderar diferentes campos como los deportes, la ciencia, el arte y la cultura. 
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card text-center border-success" style="width: 18rem;">
-                    <img src="../img/noticia4.jpg" class="card-img-top" alt="Noticia">
-                    <div class="card-body">
-                        <h5 class="h5_card_blog">Anime gratis los dibujos de sus hijos con la Inteligencia Artificial de Meta</h5>
-                        <p class="p_card_blog">La empresa antes conocida como Facebook lanzó una opción para darle vida a dibujos hechos a mano por niños, 
-                            no obstante, los adultos también pueden usarlo. Meta, matriz de Facebook, Instagram y WhasApp creó un método que usa Inteligencia Artificial (IA) para animar dibujos. 
-                            Aunque tiene un enfoque familiar para que padres y madres los usen con sus hijos e hijas, puede funcionar para cualquier persona interesada en el proceso de animación. 
-                        </p>
-                        <p class="p_card_blog">Según explica Meta, nació como un proyecto pensado para que los personajes imaginativos de los niños cobren vida y puedan ver cómo se convierten en una caricatura que puede brincar, bailar y correr. Mientras que a las personas les resulta fácil reconocer los dibujos, 
-                            que a veces pueden ser abstractos como un gato con un cuerpo más parecido al de un humano, a la Inteligencia Artificial le puede resultar difícil interpretar las figuras abstractas.
-                            No obstante, los investigadores de la compañía de Mark Zuckerberg, desarrollaron un método de tres pasos para utilizar la IA con el fin de animar automáticamente las figuras dibujadas a mano que tengan aspecto humano o sean humanos.
-                        </p>
-                        <p class="p_card_blog">Cabe subrayar que, este sistema aún es un prototipo pero los interesados en usarlo ya pueden probarlo subiendo la fotografía de un dibujo a la página de prueba.</p>
-                        <p class="p_card_blog">Como se menciono anteriormente, este programa funcione, los dibujos deben ser personajes de aspecto humano, es decir, que cuenten con una cabeza, dos brazos y piernas.</p>
-                    </div>
-                </div>
-
-            </div>
+            </section>
 
         </main>
 
@@ -128,25 +165,25 @@
             <!--  DIV PADRE DEL FOOTER -->
             <div class="footer_padre">
             
-                 <!--  DIV HIJO DEL FOOTER -->
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_info">
                     <h4 class="h4_generico">Información</h4>
                     <a class="footer_link" href="condiciones.html">CONDICIONES</a>
                     <a class="footer_link" href="contacto.html">CONTACTO</a>
                 </div>
 
-                 <!--  DIV HIJO DEL FOOTER -->
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_logo">
                     <img class="footer_transform_logo" src="../img/LOGO_ASC.png" alt="logo empresa">
                 </div>
 
-                 <!--  DIV HIJO DEL FOOTER -->
+                <!--  DIV HIJO DEL FOOTER -->
                 <div class="footer_social">
 
                     <h4 class="h4_generico">Síguenos en:</h4>
-                    <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+                    <a href="https://www.facebook.com/ascenterprise" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/asc_enterprise" class="fa fa-twitter"></a> 
+                    <a href="#" class="fa fa-instagram"></a> 
 
                 </div>
 
@@ -155,9 +192,7 @@
         </footer>
 
         <!--  SCRIPT PARA WOW -->
-        <script 
-            src="js/wow.min.js">
-        </script>
+        <script src="js/wow.min.js"></script>
 
         <!--  SCRIPT PARA WOW -->
         <script>
@@ -167,6 +202,11 @@
         <!--  SCRIPT PARA BOOTSTRAP -->
         <script 
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+        <!--  SCRIPT PARA ICONOS SOCIALES Y NAVBAR -->
+        <script 
+            src="https://kit.fontawesome.com/fa74e3e49b.js" crossorigin="anonymous">
         </script>
 
     </div>
