@@ -18,32 +18,42 @@
         <!--  CABECERA HOME  -->
         <header>
 
-            <!--  MENU DE NAVEGACION -->
-            <nav>
-
-                <!--  CONTENEDOR DEL LOGO -->
-                <div>
-                    <img src="img/LOGO_ASC.png" alt="logo empresa" class="logo_menu">
-                </div> 
-
-                <input type="checkbox" id="check">
-                <label for="check" class="bar_btn">
-                    <i class="fas fa-bars"></i>
-                </label>
-
-                <ul class="nav_menu">
-                    <li><a class="active" href="index.html">HOME</a></li>
-                    <li><a href="html/empresa.html">EMPRESA</a></li>
-                    <li><a href="html/trabajos.html">TRABAJOS</a></li>
-                    <li><a href="html/blog.html">BLOG</a></li>
-                    <li><a href="html/contacto.html">CONTACTO</a></li>
-                </ul> 
-
-            </nav>  
-
-            <!--  TITULO PRINCIPAL -->
-            <div class="div_h1_generico">
-                <h1>BIENVENIDOS A APP SOFTWARE CHALLENGE</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark  p-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/LOGO_ASC.png" alt="Logo" width="300" height="100">
+                      </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="html/empresa.html">EMPRESA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="html/trabajos.html">TRABAJOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="html/blog.html">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="html/contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- TITULO PRINCIPAL -->
+            <div class="titulos">
+                <h1 class="titulos__titulo">Bienvenidos a APP SOFTWARE CHALLENGE</h1>
+                <h2 class="titulos__subtitulo"> Desarrollo de Aplicaciones </h2>
             </div>
 
         </header>
@@ -93,52 +103,52 @@
 
             <!--  TITULO DE TRABAJOS -->
             <div class="gradiente">
-                <h2 class="h2_gradiente animate__animated animate__backInLeft">TRABAJOS</h2>
+                <h2 class="gradiente__h2 animate__animated animate__backInLeft">TRABAJOS</h2>
             </div>
 
             <!--  TRABAJOS DE ASC APLICADO CON BOOTSTRAP -->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 formato">
-						<img src="img/ManaYou.png" alt="ManaYou" class="icono">
-						<h4 class="h4_home_trabajo">ManaYou</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaYou.png" alt="ManaYou" class="formato__icono">
+						<h4 class="formato__h4">ManaYou</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
 					<div class="col-sm-4 formato">
-						<img src="img/ManaHome.png" alt="ManaHome" class="icono">
-						<h4 class="h4_home_trabajo">ManaHome</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaHome.png" alt="ManaHome" class="formato__icono">
+						<h4 class="formato__h4">ManaHome</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
 					<div class="col-sm-4 formato">
-						<img src="img/ManaStock.png" alt="ManaStock" class="icono">
-						<h4 class="h4_home_trabajo">ManaStock</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaStock.png" alt="ManaStock" class="formato__icono">
+						<h4 class="formato__h4">ManaStock</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
                     <div class="col-sm-4 formato">
-						<img src="img/ManaDebtor.png" alt="ManaDebtor" class="icono">
-						<h4 class="h4_home_trabajo">ManaDebtor</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaDebtor.png" alt="ManaDebtor" class="formato__icono">
+						<h4 class="formato__h4">ManaDebtor</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
                     <div class="col-sm-4 formato">
-						<img src="img/ManaCredit.png" alt="ManaCredit" class="icono">
-						<h4 class="h4_home_trabajo">ManaCredit</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaCredit.png" alt="ManaCredit" class="formato__icono">
+						<h4 class="formato__h4">ManaCredit</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
                     <div class="col-sm-4 formato">
-						<img src="img/ManaShop.png" alt="ManaShop" class="icono">
-						<h4 class="h4_home_trabajo">ManaShop</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaShop.png" alt="ManaShop" class="formato__icono">
+						<h4 class="formato__h4">ManaShop</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
                     <div class="col-sm-4 formato">
-						<img src="img/ManaComp.png" alt="ManaComp" class="icono">
-						<h4 class="h4_home_trabajo">ManaComp</h4>
-						<p class="p_home_parrafo">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
+						<img src="img/ManaComp.png" alt="ManaComp" class="formato__icono">
+						<h4 class="formato__h4">ManaComp</h4>
+						<p class="formato__p">Aplicación Desarrollada con GeneXus - Consíguela en Google Play>></p>
                         <a href="html/trabajos.html" class="btn btn-dark">Leer mas>></a>
                     </div>
 				</div>
