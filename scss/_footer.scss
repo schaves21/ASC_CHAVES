@@ -1,0 +1,79 @@
+/* ------------- FOOTER PARA TODAS LAS PAGINAS -------------------- */
+footer {
+    grid-area: footer;
+    width: 100%;
+    background: $colorCuatro;
+    padding: 20px 0;
+
+    /* ----------------- PROPIEDADES EN EL CONTENEDOR PADRE APLICANDO MIXIN---------------- */
+    @mixin footer_Padre ($display, $flex-direction, $flex-wrap, $justify-content, $align-items){
+        display: $display;
+        flex-direction: $flex-direction;
+        flex-wrap: $flex-wrap;
+        justify-content: $justify-content;
+        align-items: $align-items;    
+    }
+
+    .footer_padre{
+        @include footer_Padre (flex, row, wrap, space-around, center);
+        
+        .footer_info{
+            margin: 10px auto;
+
+            &__h4 {
+                color: $colorUno;
+                font-size: $fontSizeH4Footer;
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            &__link{
+                color:$colorUno;
+                font-size: $fontSizeTexto;
+                font-weight:700;
+                letter-spacing: 1px;
+                margin: 5px 10px 5px 10px;    
+                
+                &:hover{
+                    background-color: $colorTres;
+                    padding: 5px 5px 5px 5px;            
+                } 
+            }
+        }
+
+        .footer_logo{
+            margin: 10px auto;       
+        }
+
+        .footer_social{
+            margin: 10px auto;
+
+            &__h4 {
+                color: $colorUno;
+                font-size: $fontSizeH4Footer;
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            a{
+                width: 32px;
+                height: 32px;
+                font-size: $fontSizeTexto;
+                color: $colorUno;
+                margin: auto 20px;
+                line-height: 35px;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+                transition: all .4s ease-in-out;   
+                
+                &:hover {
+                    background-color: $colorTres;
+                    transform: scale(1.2);           
+                } 
+            }
+        }
+    }
+}

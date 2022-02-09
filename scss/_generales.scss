@@ -1,0 +1,34 @@
+/* ----------------------- GOOGLE FONTS ---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* --------------------- PARAMETROS GENERALES ---------------------- */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* ------------ PARAMETROS PARA EL BODY DE CADA PAGINA -------------- */
+body {
+    background: $colorUno;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/* ---- PARAMETROS PARA EL CONTENEDOR PRINCIPAL DE CADA PAGINA ------- */
+.contenedor {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: 1fr; 
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px; 
+    margin: 0;
+
+    a{
+        list-style: none;
+        text-decoration: none;
+    }
+ }

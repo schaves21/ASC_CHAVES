@@ -1,0 +1,368 @@
+/*  -------------- MAIN PARA TODAS LAS PAGINAS --------------------- */
+main {
+    grid-area: main;
+
+    /* ------------- EFECTO GRADIENTE EN LOS CONTENEDORES APLICANDO MIXIN ------------- */
+    @mixin gradiente ($height, $display, $justify-content, $align-items, $text-align, $margin, $linear-bgcolor) {
+        height: $height;
+        display: $display;
+        justify-content: $justify-content;
+        align-items: $align-items;   
+        text-align: $text-align;
+        margin: $margin;
+        background-image: $linear-bgcolor; 
+    }
+
+    .gradiente{
+        @include gradiente (80px, flex, center, center, center, 20px auto, linear-gradient(to right, $colorCinco, $colorCuatro));
+
+        &__subtitulo{
+            font-size: $fontSizeH2Gradiente;
+            font-weight: bold;
+            color: $colorTres;
+            animation-duration: 3s;
+            animation-name: aparecer;
+            animation-iteration-count: infinite;
+
+            /* -------------- ANIMACION EN H2 --------------------------- */
+            @keyframes aparecer {
+                0% {
+                opacity: 0;
+                }
+                100% {
+                opacity: 1;
+                }
+            }
+        }
+    }
+
+    /* -------------- PARRAFO GENERICO PARA LA MAYORIA DE LAS PAGINAS ---------------- */
+    .p_generico {
+        font-size: $fontSizeTexto;
+        color: $colorDos;
+        font-weight: 600;
+        text-align: justify;
+        margin: 20px 20px 20px 20px;
+    }
+
+    /* ------------------ ESTILOS MAIN HOME ------------------------ */
+    /* ------------------- H2 PARA CAROUSEL ------------------------ */
+    .h2_carousel {
+        font-size: $fontSizeH2Carousel;
+        font-weight: bold;
+        background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+    }
+
+    /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
+    .p_carousel {
+        font-size: $fontSizePCarousel;
+        background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+        font-weight: bold;
+    }
+
+    /* ----------- PROPIEDADES EN EL CONTENEDOR APLICANDO MIXIN---------------- */
+    @mixin columna ($text-align){
+        text-align: $text-align;
+    }
+
+    .formato{
+        @include columna (center);
+
+        &__icono{
+            vertical-align: top;
+            margin-bottom: 30px;
+        }
+
+        &__h4{    
+            font-size: $fontSizeSubtitulo;
+            color: $colorTres;
+            font-weight: bold;
+            margin-bottom: 30px; 
+        }
+
+        &__p{
+            font-size: $fontSizeTexto;
+            color: $colorDos;
+            font-weight: bold;
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+
+        a{
+            margin-bottom: 30px;
+        }
+    }
+    
+    /* ---------------------- MAIN EMPRESA ------------------------- */  
+    /* ----------PROPIEDADES PARA EL CONTENEDOR DE EMPRESA --------- */
+    .empresa{
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        /* -------------- FORMATO PARA LAS IMG -------------------- */
+        img{
+            border-radius: 10px;
+            width: 100%;
+            vertical-align: top;
+            object-fit: cover; 
+        }
+
+        /* -------------- H2 PARA SUB TITULO DE EMPRESA ------------ */
+        .h2_titulo_empresa{
+            font-size: $fontSizeSubtitulo;
+            margin: 30px auto 20px auto;
+            font-weight: bold;
+            color: $colorTres;
+            text-align: center; 
+        }
+
+        /* -------------- PARRAFO PARA EMPRESA -------------------- */
+        .p_texto_empresa {
+            font-size: $fontSizeTexto;
+            color: $colorDos;
+            font-weight: 600;
+            text-align: justify;
+        }
+
+        /* -------------- LINEA DE SEPARACION CON UN DIV APLICANDO MIXIN ----------- */
+        @mixin linea_Horizonatal ($border-top, $hight, $padding, $margin){
+            border-top: $border-top;
+            height:  $hight;
+            padding: $padding;
+            margin: $margin;    
+        }
+
+        .linea{
+            @include linea_Horizonatal(2px solid $colorCuatro, 4px , 0 , 20px auto 20px auto );
+        }
+    }
+
+    /* --------------------- MAIN TRABAJOS ------------------------- */
+    /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+    @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){
+        background-image: $radial-bgcolor;
+        align-items: $align-items;
+        margin: $margin;
+    }
+
+    .radialGradiente{
+        @include radial_Gradiente (radial-gradient(circle, $colorCinco, $colorCuatro), center, 20px auto);       
+
+        &__h3{
+            font-size: $fontSizeSubtitulo;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            color: $colorTres;
+        }
+    }
+
+    /* ----------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------------ */
+    .p_trabajo_parrafo{
+        font-size: $fontSizeTexto;
+        color: $colorDos;
+        font-weight: 600;
+        text-align: justify;
+        line-height: 25px;
+        margin: 20px auto 20px auto;   
+    }
+
+    /* ------------------------ MAIN BLOG -------------------------- */
+    /* ----------- PROPIEDADES PARA EL CONTENEDOR DEL BLOG --------- */
+    .blog{
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        /* ------------- PROPIEDADES PARA EL CONTENEDOR ROW APLICANDO MIXIN--------- */
+        @mixin fila ($margin){
+            margin: $margin;
+        }
+
+        .row{
+            @include fila (30px auto);
+
+            /* ------------- FORMATO PARA LAS IMG ------------------ */
+            img{
+                border-radius: 100%;
+                width: 100%;
+                vertical-align: top;
+                object-fit: cover; 
+            }
+
+            /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
+            .ellipseGradiente{
+                @include radial_Gradiente (radial-gradient(ellipse, $colorCuatro, $colorCinco), center, 20px auto); 
+
+                &__h2{
+                    font-size: $fontSizeH2Elipse;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    font-weight: bold;
+                    color: $colorTres;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+            /* -------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------- */
+            .p_texto_blog{           
+                font-size: $fontSizeTexto;
+                color: $colorDos;
+                font-weight: 600;
+                text-align: justify;
+                line-height: 25px;
+                margin: 20px auto 20px auto;              
+            }
+        }
+    }
+
+    /* ---------------------- MAIN CONTACTO ------------------------- */
+    /* -------------- PROPIEDADES PARA EL CONTENEDOR DE IMG APLICANDO MIXIN------------- */
+    @mixin img_Contacto ($display, $align-items, $justify-content, $margin){
+        display: $display;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        margin: $margin;    
+    }
+
+    .img_contacto{
+        @include img_Contacto (flex, center, center, 10px auto 30px auto);
+        
+        /* ------------------ PROPIEDAD PARA LA IMG ------------------------- */
+        img{
+            max-width: 50%;
+            object-fit: cover;      
+        }
+    }
+
+    /* -------------- PROPIEDADES PARA EL FORM APLICANDO MIXIN ------------------ */
+    @mixin form_Contacto ($width, $display, $grid-template-columns, $justify-items){
+        width: $width;
+        display: $display;
+        grid-template-columns: $grid-template-columns;
+        justify-items: $justify-items;    
+    }
+
+    .formulario {
+        @include form_Contacto (98%, grid, 1fr, center); 
+
+        /* -------------- ESTILO PARA EL LABEL -------------------- */
+        .etiqueta_form{
+            font-size: $fontSizeTexto;
+            color: $colorTres;
+            font-weight: bold;
+            line-height: 34px;
+        }
+
+        /* ----------- TRANSICION EN INPUT ----------------------------- */
+        input{
+            transition: all 2s;     
+        }
+
+        /* ----------- TRANSICION EN TEXTAREA -------------------------- */
+        textarea{
+            min-height: 120px;
+            max-height: 300px;
+            width: 60%;
+            transition: all 2s;
+
+            &:focus{
+                border: 3px solid $colorTres; 
+            }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            width: 60%;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border: 1px solid $colorTres;
+            font-size: $fontSizeTexto;
+
+            &:focus{
+                border: 3px solid $colorTres;
+            }
+        }
+
+        /* -------------- APLICNADO EXTEND ---------------- */
+        .boton {
+            width: 150px;
+            margin: 0 auto;
+            background: none;
+            border: 1px solid $colorCuatro;
+            color: $colorCuatro;
+            padding: 10px;
+            cursor: pointer;
+            font-size: $fontSizeTexto;
+            font-weight: 700;
+            border-radius: 3px;
+            margin-bottom: 10px;       
+        }
+
+        .submit{
+            @extend .boton;
+            background: $colorCuatro;  
+            color: $colorUno;  
+            border-radius: 4px;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .reset{
+            @extend .boton;
+            background: $colorCuatro;  
+            color: $colorUno; 
+            border-radius: 4px;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    /* -------------- PROPIEDADES PARA EL MAPA APLICANDO MIXIN ------------------ */
+    @mixin mapa ($overflow, $padding-bottom, $position, $hight, $margin-top){
+        overflow: $overflow;
+        padding-bottom: $padding-bottom;
+        position: $position;
+        height: $hight;
+        margin-top: $margin-top;    
+    }
+
+    .mapa_responsivo {
+        @include mapa (hidden, 30%, relative, 0, 20px);
+        
+        iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;       
+        }
+    }
+    
+    /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */
+    .terminos_condiciones{
+        margin-top:auto;
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+
+        /* ----- EFECTO GRADIENTE AL CONTENEDOR APLICANDO MIXIN --------- */
+        .gradienteApp{ 
+            @include gradiente (60px, flex, center, center, center, 20px auto, linear-gradient(to right, $colorCinco , $colorCuatro));         
+
+            /* -------------- H2 PARA SUBTITULO DE CONTACTO -------------------- */
+            &__h3{
+                font-size: $fontSizeSubtitulo;
+                font-weight: bold;
+                color: $colorTres;
+            }
+        }
+    }
+}

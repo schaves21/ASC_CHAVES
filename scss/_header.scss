@@ -1,0 +1,38 @@
+/* -------------- HEADER PARA TODAS LAS PAGINAS -------------------- */
+header {
+    background: url(../img/cabecera_fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+
+    nav {
+        background-color: transparent;
+    }
+
+    /* ----------- PROPIEDADES EN EL CONTENEDOR DEL TITULO APLICANDO MIXIN---------------- */
+    @mixin titulo_Principal ($flex, $justify-content, $align-items, $text-align, $flex-direction, $height, $width){
+        display: $flex;
+        justify-content: $justify-content;
+        align-items: $align-items;
+        text-align: $text-align;
+        flex-direction: $flex-direction;
+        height: $height;
+        width: $width;
+    }
+
+    .titulos {
+        @include titulo_Principal (flex, center, center, center, column, 100%, 100%);
+
+        &__titulo {
+            color: $colorUno;
+            font-size: $fontSizeH1;
+            font-weight: 700;
+        }
+        &__subtitulo {
+            color: $colorSeis;
+            font-size: $fontSizeH2Gradiente;
+        }
+    }
+}

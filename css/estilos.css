@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* ------------ IMPORTO LOS ARCHIVOS SCSS NECESARIOS PARA PROCESAR ------- */
 /* ---------------- VARIABLES -------------------*/
 /* ----------------------- GOOGLE FONTS ---------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
@@ -20,358 +22,355 @@ body {
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
-  margin: 0;
-  /* -------------- HEADER PARA TODAS LAS PAGINAS -------------------- */
-  /*  -------------- MAIN PARA TODAS LAS PAGINAS --------------------- */
-  /* ------------- FOOTER PARA TODAS LAS PAGINAS -------------------- */
-  /* -------LAS PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO ----- */ }
+  margin: 0; }
   .contenedor a {
     list-style: none;
     text-decoration: none; }
-  .contenedor header {
-    background: url(../img/cabecera_fondo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 500px; }
-    .contenedor header nav {
-      background-color: transparent; }
-    .contenedor header .titulos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-      height: 100%;
-      width: 100%; }
-      .contenedor header .titulos__titulo {
-        color: #fff;
-        font-size: 50px; }
-      .contenedor header .titulos__subtitulo {
-        color: #f7f7f7; }
-  .contenedor main {
-    grid-area: main;
-    /* ------- EFECTO GRADIENTE A LOS CONTENEDORES CON H2 ---------- */
-    /* -------------- PARRAFO PARA TOAS LAS PAGINAS ---------------- */
-    /* ------------------ ESTILOS MAIN HOME ------------------------ */
-    /* ------------------- H2 PARA CAROUSEL ------------------------ */
-    /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
-    /* ---------------------- MAIN EMPRESA ------------------------- */
-    /* ----------PROPIEDADES PARA EL CONTENEDOR DE EMPRESA --------- */
-    /* --------------------- MAIN TRABAJOS ------------------------- */
-    /* ---------------- GRADIENTE EN H2 ---------------------------- */
-    /* ----------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------------ */
-    /* ------------------------ MAIN BLOG -------------------------- */
-    /* ----------- PROPIEDADES PARA EL CONTENEDOR DEL BLOG --------- */
-    /* ---------------------- MAIN CONTACTO ------------------------- */
-    /* -------------- PROPIEDADES PARA EL DIV DE LA IMG ------------- */
-    /* ---------------- PROPIEDADES PARA EL FORM -------------------- */
-    /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */ }
-    .contenedor main .gradiente {
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 40px;
-      background-image: linear-gradient(to right, #5A3673, #03A64A);
-      /* ------------------- H2 PARA SUBTITULO- ----------------- */ }
-      .contenedor main .gradiente__h2 {
-        font-size: 30px;
-        font-weight: bold;
-        color: #BAD94A;
-        animation-duration: 3s;
-        animation-name: aparecer;
-        animation-iteration-count: infinite;
-        /* -------------- ANIMACION EN H2 --------------------------- */ }
+
+/* -------------- HEADER PARA TODAS LAS PAGINAS -------------------- */
+header {
+  background: url(../img/cabecera_fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  /* ----------- PROPIEDADES EN EL CONTENEDOR DEL TITULO APLICANDO MIXIN---------------- */ }
+  header nav {
+    background-color: transparent; }
+  header .titulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%; }
+    header .titulos__titulo {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 700; }
+    header .titulos__subtitulo {
+      color: #f7f7f7;
+      font-size: 30px; }
+
+/*  -------------- MAIN PARA TODAS LAS PAGINAS --------------------- */
+main {
+  grid-area: main;
+  /* ------------- EFECTO GRADIENTE EN LOS CONTENEDORES APLICANDO MIXIN ------------- */
+  /* -------------- PARRAFO GENERICO PARA LA MAYORIA DE LAS PAGINAS ---------------- */
+  /* ------------------ ESTILOS MAIN HOME ------------------------ */
+  /* ------------------- H2 PARA CAROUSEL ------------------------ */
+  /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
+  /* ----------- PROPIEDADES EN EL CONTENEDOR APLICANDO MIXIN---------------- */
+  /* ---------------------- MAIN EMPRESA ------------------------- */
+  /* ----------PROPIEDADES PARA EL CONTENEDOR DE EMPRESA --------- */
+  /* --------------------- MAIN TRABAJOS ------------------------- */
+  /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+  /* ----------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------------ */
+  /* ------------------------ MAIN BLOG -------------------------- */
+  /* ----------- PROPIEDADES PARA EL CONTENEDOR DEL BLOG --------- */
+  /* ---------------------- MAIN CONTACTO ------------------------- */
+  /* -------------- PROPIEDADES PARA EL CONTENEDOR DE IMG APLICANDO MIXIN------------- */
+  /* -------------- PROPIEDADES PARA EL FORM APLICANDO MIXIN ------------------ */
+  /* -------------- PROPIEDADES PARA EL MAPA APLICANDO MIXIN ------------------ */
+  /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */ }
+  main .gradiente {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    background-image: linear-gradient(to right, #5A3673, #03A64A); }
+    main .gradiente__subtitulo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #BAD94A;
+      animation-duration: 3s;
+      animation-name: aparecer;
+      animation-iteration-count: infinite;
+      /* -------------- ANIMACION EN H2 --------------------------- */ }
 
 @keyframes aparecer {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-    .contenedor main .p_generico {
+  main .p_generico {
+    font-size: 16px;
+    color: gray;
+    font-weight: 600;
+    text-align: justify;
+    margin: 20px 20px 20px 20px; }
+  main .h2_carousel {
+    font-size: 34px;
+    font-weight: bold;
+    background: linear-gradient(rgba(255, 255, 255, 0), black); }
+  main .p_carousel {
+    font-size: 24px;
+    background: linear-gradient(rgba(255, 255, 255, 0), black);
+    font-weight: bold; }
+  main .formato {
+    text-align: center; }
+    main .formato__icono {
+      vertical-align: top;
+      margin-bottom: 30px; }
+    main .formato__h4 {
+      font-size: 28px;
+      color: #BAD94A;
+      font-weight: bold;
+      margin-bottom: 30px; }
+    main .formato__p {
+      font-size: 16px;
+      color: gray;
+      font-weight: bold;
+      line-height: 28px;
+      margin-bottom: 30px; }
+    main .formato a {
+      margin-bottom: 30px; }
+  main .empresa {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* -------------- FORMATO PARA LAS IMG -------------------- */
+    /* -------------- H2 PARA SUB TITULO DE EMPRESA ------------ */
+    /* -------------- PARRAFO PARA EMPRESA -------------------- */
+    /* -------------- LINEA DE SEPARACION CON UN DIV APLICANDO MIXIN ----------- */ }
+    main .empresa img {
+      border-radius: 10px;
+      width: 100%;
+      vertical-align: top;
+      object-fit: cover; }
+    main .empresa .h2_titulo_empresa {
+      font-size: 28px;
+      margin: 30px auto 20px auto;
+      font-weight: bold;
+      color: #BAD94A;
+      text-align: center; }
+    main .empresa .p_texto_empresa {
       font-size: 16px;
       color: gray;
       font-weight: 600;
-      text-align: justify;
-      margin: 20px 20px 20px 20px; }
-    .contenedor main .h2_carousel {
-      font-size: 34px;
+      text-align: justify; }
+    main .empresa .linea {
+      border-top: 2px solid #03A64A;
+      height: 4px;
+      padding: 0;
+      margin: 20px auto 20px auto; }
+  main .radialGradiente {
+    background-image: radial-gradient(circle, #5A3673, #03A64A);
+    align-items: center;
+    margin: 20px auto; }
+    main .radialGradiente__h3 {
+      font-size: 28px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       font-weight: bold;
-      background: linear-gradient(rgba(255, 255, 255, 0), black); }
-    .contenedor main .p_carousel {
-      font-size: 24px;
-      background: linear-gradient(rgba(255, 255, 255, 0), black);
-      font-weight: bold; }
-    .contenedor main .formato {
-      text-align: center; }
-      .contenedor main .formato__icono {
-        vertical-align: top;
-        margin-bottom: 30px; }
-      .contenedor main .formato__h4 {
-        font-size: 26px;
-        color: #BAD94A;
-        font-weight: bold;
-        margin-bottom: 30px; }
-      .contenedor main .formato__p {
-        font-size: 16px;
-        color: gray;
-        font-weight: bold;
-        line-height: 28px;
-        margin-bottom: 30px; }
-      .contenedor main .formato a {
-        margin-bottom: 30px; }
-    .contenedor main .empresa {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      /* -------------- FORMATO PARA LAS IMG -------------------- */
-      /* -------------- H2 PARA SUB TITULO DE EMPRESA ------------ */
-      /* -------------- PARRAFO PARA EMPRESA -------------------- */
-      /* -------------- LINEA DE SEPARACION CON UN DIV ----------- */ }
-      .contenedor main .empresa img {
-        border-radius: 10px;
+      color: #BAD94A; }
+  main .p_trabajo_parrafo {
+    font-size: 16px;
+    color: gray;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 25px;
+    margin: 20px auto 20px auto; }
+  main .blog {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* ------------- PROPIEDADES PARA EL CONTENEDOR ROW APLICANDO MIXIN--------- */ }
+    main .blog .row {
+      margin: 30px auto;
+      /* ------------- FORMATO PARA LAS IMG ------------------ */
+      /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
+      /* -------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------- */ }
+      main .blog .row img {
+        border-radius: 100%;
         width: 100%;
-        vertical-align: top; }
-      .contenedor main .empresa .h2_titulo_empresa {
-        font-size: 28px;
-        margin: 30px auto 20px auto;
-        font-weight: bold;
-        color: #BAD94A;
-        text-align: center; }
-      .contenedor main .empresa .p_texto_empresa {
+        vertical-align: top;
+        object-fit: cover; }
+      main .blog .row .ellipseGradiente {
+        background-image: radial-gradient(ellipse, #03A64A, #5A3673);
+        align-items: center;
+        margin: 20px auto; }
+        main .blog .row .ellipseGradiente__h2 {
+          font-size: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-weight: bold;
+          color: #BAD94A;
+          align-items: center;
+          text-align: center; }
+      main .blog .row .p_texto_blog {
         font-size: 16px;
         color: gray;
         font-weight: 600;
-        text-align: justify; }
-      .contenedor main .empresa .linea {
-        border-top: 2px solid #03A64A;
-        height: 4px;
-        padding: 0;
+        text-align: justify;
+        line-height: 25px;
         margin: 20px auto 20px auto; }
-    .contenedor main .radial_gradiente {
-      background-image: radial-gradient(circle, #5A3673, #03A64A);
-      align-items: center;
-      margin-top: 20px;
+  main .img_contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 30px auto;
+    /* ------------------ PROPIEDAD PARA LA IMG ------------------------- */ }
+    main .img_contacto img {
+      max-width: 50%;
+      object-fit: cover; }
+  main .formulario {
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    /* -------------- ESTILO PARA EL LABEL -------------------- */
+    /* ----------- TRANSICION EN INPUT ----------------------------- */
+    /* ----------- TRANSICION EN TEXTAREA -------------------------- */
+    /* -------------- APLICNADO EXTEND ---------------- */ }
+    main .formulario .etiqueta_form {
+      font-size: 16px;
+      color: #BAD94A;
+      font-weight: bold;
+      line-height: 34px; }
+    main .formulario input {
+      transition: all 2s; }
+    main .formulario textarea {
+      min-height: 120px;
+      max-height: 300px;
+      width: 60%;
+      transition: all 2s; }
+      main .formulario textarea:focus {
+        border: 3px solid #BAD94A; }
+    main .formulario input[type="text"],
+    main .formulario input[type="email"],
+    main .formulario textarea {
+      width: 60%;
+      padding: 20px;
       margin-bottom: 20px;
-      /* -------------- H3 PARA TODAS LAS PAGINAS -------------------- */ }
-      .contenedor main .radial_gradiente .h3_trabajo {
-        font-size: 24px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #BAD94A;
+      font-size: 16px; }
+      main .formulario input[type="text"]:focus,
+      main .formulario input[type="email"]:focus,
+      main .formulario textarea:focus {
+        border: 3px solid #BAD94A; }
+    main .formulario .boton, main .formulario .submit, main .formulario .reset {
+      width: 150px;
+      margin: 0 auto;
+      background: none;
+      border: 1px solid #03A64A;
+      color: #03A64A;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 3px;
+      margin-bottom: 10px; }
+    main .formulario .submit {
+      background: #03A64A;
+      color: #fff;
+      border-radius: 4px;
+      transition: 1s; }
+      main .formulario .submit:hover {
+        transform: scale(1.05); }
+    main .formulario .reset {
+      background: #03A64A;
+      color: #fff;
+      border-radius: 4px;
+      transition: 1s; }
+      main .formulario .reset:hover {
+        transform: scale(1.05); }
+  main .mapa_responsivo {
+    overflow: hidden;
+    padding-bottom: 30%;
+    position: relative;
+    height: 0;
+    margin-top: 20px; }
+    main .mapa_responsivo iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute; }
+  main .terminos_condiciones {
+    margin-top: auto;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    /* ----- EFECTO GRADIENTE AL CONTENEDOR APLICANDO MIXIN --------- */ }
+    main .terminos_condiciones .gradienteApp {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 20px auto;
+      background-image: linear-gradient(to right, #5A3673, #03A64A);
+      /* -------------- H2 PARA SUBTITULO DE CONTACTO -------------------- */ }
+      main .terminos_condiciones .gradienteApp__h3 {
+        font-size: 28px;
         font-weight: bold;
         color: #BAD94A; }
-    .contenedor main .p_trabajo_parrafo {
-      font-size: 16px;
-      color: gray;
-      font-weight: 600;
-      text-align: justify;
-      line-height: 25px;
-      margin: 20px auto 20px auto; }
-    .contenedor main .blog {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      /* ------------- PROPIEDADES PARA EL CONTENEDOR ROW--------- */ }
-      .contenedor main .blog .row {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        /* ------------- FORMATO PARA LAS IMG ------------------ */
-        /* ----------- GRADIENTE EN H2 ------------------------- */
-        /* -------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------- */ }
-        .contenedor main .blog .row img {
-          border-radius: 100%;
-          width: 100%;
-          vertical-align: top; }
-        .contenedor main .blog .row .ellipse_gradiente {
-          background-image: radial-gradient(ellipse, #03A64A, #5A3673);
-          margin-top: 20px;
-          margin-bottom: 20px;
-          /* ----------- H2 PARA TODAS LAS PAGINAS ----------- */ }
-          .contenedor main .blog .row .ellipse_gradiente .h2_blog {
-            font-size: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-weight: bold;
-            color: #BAD94A;
-            align-items: center;
-            text-align: center; }
-        .contenedor main .blog .row .p_texto_blog {
-          font-size: 16px;
-          color: gray;
-          font-weight: 600;
-          text-align: justify;
-          line-height: 25px;
-          margin: 20px auto 20px auto; }
-    .contenedor main .img_contacto {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px auto 30px auto;
-      /* ------------------ PROPIEDAD PARA LA IMG ------------------------- */ }
-      .contenedor main .img_contacto img {
-        max-width: 50%; }
-    .contenedor main .formulario {
-      width: 98%;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      /* -------------- ESTILO PARA EL LABEL -------------------- */
-      /* ----------- TRANSICION EN INPUT ----------------------------- */
-      /* ----------- TRANSICION EN TEXTAREA -------------------------- */ }
-      .contenedor main .formulario .etiqueta_form {
-        font-size: 16px;
-        color: #BAD94A;
+
+/* ------------- FOOTER PARA TODAS LAS PAGINAS -------------------- */
+footer {
+  grid-area: footer;
+  width: 100%;
+  background: #03A64A;
+  padding: 20px 0;
+  /* ----------------- PROPIEDADES EN EL CONTENEDOR PADRE APLICANDO MIXIN---------------- */ }
+  footer .footer_padre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+    footer .footer_padre .footer_info {
+      margin: 10px auto; }
+      footer .footer_padre .footer_info__h4 {
+        color: #fff;
+        font-size: 24px;
         font-weight: bold;
-        line-height: 34px; }
-      .contenedor main .formulario input {
-        transition: all 2s; }
-      .contenedor main .formulario textarea {
-        min-height: 120px;
-        max-height: 300px;
-        width: 60%;
-        transition: all 2s; }
-      .contenedor main .formulario textarea:focus {
-        border: 3px solid #BAD94A; }
-      .contenedor main .formulario input[type="text"],
-      .contenedor main .formulario input[type="email"],
-      .contenedor main .formulario textarea {
-        width: 60%;
-        padding: 20px;
         margin-bottom: 20px;
-        border-radius: 3px;
-        border: 1px solid #BAD94A;
-        font-size: 16px; }
-      .contenedor main .formulario input:focus {
-        border: 3px solid #BAD94A; }
-      .contenedor main .formulario input[type="submit"] {
-        width: 200px;
-        margin: 0 auto;
-        background: none;
-        border: 1px solid #03A64A;
-        color: #03A64A;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 3px;
-        margin-bottom: 10px; }
-      .contenedor main .formulario input[type="submit"]:hover {
-        background: #03A64A;
+        text-align: center; }
+      footer .footer_padre .footer_info__link {
         color: #fff;
-        padding: 10px;
-        cursor: pointer;
         font-size: 16px;
-        border-radius: 3px; }
-      .contenedor main .formulario input[type="reset"] {
-        width: 200px;
-        margin: 0 auto;
-        background: none;
-        border: 1px solid #03A64A;
-        color: #03A64A;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 3px;
-        margin-bottom: 20px; }
-      .contenedor main .formulario input[type="reset"]:hover {
-        background: #03A64A;
-        color: #fff;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 3px; }
-    .contenedor main .mapa_responsivo {
-      overflow: hidden;
-      padding-bottom: 30%;
-      position: relative;
-      height: 0; }
-      .contenedor main .mapa_responsivo iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute; }
-    .contenedor main .terminos_condiciones {
-      background: #f7f7f7;
-      margin-top: auto;
-      padding-top: 5px;
-      padding-right: 5px;
-      padding-bottom: 5px;
-      padding-left: 5px;
-      text-align: center;
-      /* ----- EFECTO GRADIENTE A LOS CONTENEDORES CON H3 --------- */ }
-      .contenedor main .terminos_condiciones .gradiente_h3 {
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background-image: linear-gradient(to right, #5A3673, #03A64A);
-        /* -------------- H2 PARA SUBTITULO DE CONTACTO -------------------- */ }
-        .contenedor main .terminos_condiciones .gradiente_h3 .h3_tyc {
-          font-size: 28px;
-          font-weight: bold;
-          color: #BAD94A; }
-  .contenedor footer {
-    grid-area: footer;
-    width: 100%;
-    background: #03A64A;
-    padding: 20px 0; }
-    .contenedor footer .footer_padre {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center; }
-      .contenedor footer .footer_padre .footer_info {
-        margin: 10px auto; }
-        .contenedor footer .footer_padre .footer_info .h4_generico {
-          color: #fff;
-          font-size: 26px;
-          font-weight: bold;
-          margin-bottom: 20px;
-          text-align: center; }
-        .contenedor footer .footer_padre .footer_info .footer_link {
-          color: #fff;
-          font-size: 16px;
-          font-weight: 700;
-          letter-spacing: 1px;
-          margin: 5px 10px 5px 10px; }
-        .contenedor footer .footer_padre .footer_info .footer_link:hover {
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 5px 10px 5px 10px; }
+        footer .footer_padre .footer_info__link:hover {
           background-color: #BAD94A;
           padding: 5px 5px 5px 5px; }
-      .contenedor footer .footer_padre .footer_logo {
-        margin: 10px auto; }
-      .contenedor footer .footer_padre .footer_social {
-        margin: 10px auto; }
-        .contenedor footer .footer_padre .footer_social .h4_generico {
-          color: #fff;
-          font-size: 26px;
-          font-weight: bold;
-          margin-bottom: 20px;
-          text-align: center; }
-        .contenedor footer .footer_padre .footer_social a {
-          width: 35px;
-          height: 35px;
-          font-size: 24px;
-          color: #fff;
-          margin: auto 20px;
-          line-height: 35px;
-          text-align: center;
-          border-radius: 50%;
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-          transition: all .4s ease-in-out; }
-        .contenedor footer .footer_padre .footer_social a:hover {
+    footer .footer_padre .footer_logo {
+      margin: 10px auto; }
+    footer .footer_padre .footer_social {
+      margin: 10px auto; }
+      footer .footer_padre .footer_social__h4 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center; }
+      footer .footer_padre .footer_social a {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        color: #fff;
+        margin: auto 20px;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transition: all .4s ease-in-out; }
+        footer .footer_padre .footer_social a:hover {
           background-color: #BAD94A;
           transform: scale(1.2); }
-  @media only screen and (max-width: 992px) {
-    .contenedor footer {
-      height: 400px; }
-      .contenedor footer .footer_padre {
-        flex-direction: column; } }
-  @media only screen and (min-width: 992px) {
-    .contenedor .footer_padre {
-      flex-direction: row; } }
+
+/* -------MEDIAS QUERIES PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO ----- */
+@media only screen and (max-width: 992px) {
+  footer {
+    height: 30vh; }
+    footer .footer_padre {
+      flex-direction: column; } }
+
+@media only screen and (min-width: 992px) {
+  .footer_padre {
+    flex-direction: row; } }
