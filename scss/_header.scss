@@ -7,12 +7,19 @@ header {
     width: 100%;
     height: 100vh;
 
+    /* ---------- PROPIEDADES PARA EL NAV -------------------- */
     nav {
         background-color: transparent;
+
+        a{
+            font-size: $fontSizeNavBar;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
     }
 
     /* ----------- PROPIEDADES EN EL CONTENEDOR DEL TITULO APLICANDO MIXIN---------------- */
-    @mixin titulo_Principal ($flex, $justify-content, $align-items, $text-align, $flex-direction, $height, $width){
+    @mixin titulo_Principal ($flex, $justify-content, $align-items, $text-align, $flex-direction, $height, $width, $padding-left, $padding-rigth){
         display: $flex;
         justify-content: $justify-content;
         align-items: $align-items;
@@ -20,19 +27,23 @@ header {
         flex-direction: $flex-direction;
         height: $height;
         width: $width;
+        padding-left: $padding-left;
+        padding-right: $padding-rigth;
     }
 
     .titulos {
-        @include titulo_Principal (flex, center, center, center, column, 100%, 100%);
+        @include titulo_Principal (flex, center, center, center, column, 100%, 100%, 20px, 20px);
 
         &__titulo {
             color: $colorUno;
-            font-size: $fontSizeH1;
+            font-size: $fontSizeH1Header;
             font-weight: 700;
+            padding: auto 10px auto 10px;
         }
         &__subtitulo {
-            color: $colorSeis;
-            font-size: $fontSizeH2Gradiente;
+            color: $colorUno;
+            font-size: $fontSizeH2Header;
+            padding: auto 10px auto 10px;
         }
     }
 }

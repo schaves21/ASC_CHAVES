@@ -46,19 +46,24 @@ main {
     }
 
     /* ------------------ ESTILOS MAIN HOME ------------------------ */
-    /* ------------------- H2 PARA CAROUSEL ------------------------ */
-    .h2_carousel {
-        font-size: $fontSizeH2Carousel;
-        font-weight: bold;
-        background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+
+    .slider{
+
+            /* ------------------- H2 PARA CAROUSEL ------------------------ */
+        &__titulo {
+            font-size: $fontSizeH2Carousel;
+            font-weight: bold;
+            background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+        }
+    
+        /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
+        &__parrafo {
+            font-size: $fontSizePCarousel;
+            background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
+            font-weight: bold;
+        }
     }
 
-    /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
-    .p_carousel {
-        font-size: $fontSizePCarousel;
-        background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
-        font-weight: bold;
-    }
 
     /* ----------- PROPIEDADES EN EL CONTENEDOR APLICANDO MIXIN---------------- */
     @mixin columna ($text-align){
@@ -73,7 +78,7 @@ main {
             margin-bottom: 30px;
         }
 
-        &__h4{    
+        &__h3{    
             font-size: $fontSizeSubtitulo;
             color: $colorTres;
             font-weight: bold;
@@ -94,6 +99,7 @@ main {
     }
     
     /* ---------------------- MAIN EMPRESA ------------------------- */  
+
     /* ----------PROPIEDADES PARA EL CONTENEDOR DE EMPRESA --------- */
     .empresa{
         margin-top: 30px;
@@ -107,21 +113,24 @@ main {
             object-fit: cover; 
         }
 
-        /* -------------- H2 PARA SUB TITULO DE EMPRESA ------------ */
-        .h2_titulo_empresa{
-            font-size: $fontSizeSubtitulo;
-            margin: 30px auto 20px auto;
-            font-weight: bold;
-            color: $colorTres;
-            text-align: center; 
-        }
+        .columna{
 
-        /* -------------- PARRAFO PARA EMPRESA -------------------- */
-        .p_texto_empresa {
-            font-size: $fontSizeTexto;
-            color: $colorDos;
-            font-weight: 600;
-            text-align: justify;
+            /* -------------- H2 PARA SUBTITULO DE EMPRESA ------------ */
+            &__titulo{
+                font-size: $fontSizeSubtitulo;
+                margin: 30px auto 20px auto;
+                font-weight: bold;
+                color: $colorTres;
+                text-align: center; 
+            }
+
+            /* -------------- PARRAFO PARA EMPRESA -------------------- */
+            &__parrafo {
+                font-size: $fontSizeTexto;
+                color: $colorDos;
+                font-weight: 600;
+                text-align: justify;
+            }
         }
 
         /* -------------- LINEA DE SEPARACION CON UN DIV APLICANDO MIXIN ----------- */
@@ -138,36 +147,41 @@ main {
     }
 
     /* --------------------- MAIN TRABAJOS ------------------------- */
-    /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
-    @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){
-        background-image: $radial-bgcolor;
-        align-items: $align-items;
-        margin: $margin;
-    }
 
-    .radialGradiente{
-        @include radial_Gradiente (radial-gradient(circle, $colorCinco, $colorCuatro), center, 20px auto);       
+    .formato{
 
-        &__h3{
-            font-size: $fontSizeSubtitulo;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-weight: bold;
-            color: $colorTres;
+        /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+        @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){
+            background-image: $radial-bgcolor;
+            align-items: $align-items;
+            margin: $margin;
+        }
+
+        .radialGradiente{
+            @include radial_Gradiente (radial-gradient(circle, $colorCinco, $colorCuatro), center, 20px auto);       
+
+            &__h3{
+                font-size: $fontSizeH3Radial;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-weight: bold;
+                color: $colorTres;
+            }
+        }
+
+        /* ----------- ESTILO PARA EL PARRAFO------------ */
+        &__parrafo{
+            font-size: $fontSizeTexto;
+            color: $colorDos;
+            font-weight: 600;
+            text-align: justify;
+            line-height: 25px;
+            margin: 20px auto 20px auto;   
         }
     }
 
-    /* ----------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------------ */
-    .p_trabajo_parrafo{
-        font-size: $fontSizeTexto;
-        color: $colorDos;
-        font-weight: 600;
-        text-align: justify;
-        line-height: 25px;
-        margin: 20px auto 20px auto;   
-    }
-
     /* ------------------------ MAIN BLOG -------------------------- */
+
     /* ----------- PROPIEDADES PARA EL CONTENEDOR DEL BLOG --------- */
     .blog{
         margin-top: 30px;
@@ -189,34 +203,45 @@ main {
                 object-fit: cover; 
             }
 
-            /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
-            .ellipseGradiente{
-                @include radial_Gradiente (radial-gradient(ellipse, $colorCuatro, $colorCinco), center, 20px auto); 
+            .valor{
 
-                &__h2{
-                    font-size: $fontSizeH2Elipse;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    font-weight: bold;
-                    color: $colorTres;
-                    align-items: center;
-                    text-align: center;
+                /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+                @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){
+                    background-image: $radial-bgcolor;
+                    align-items: $align-items;
+                    margin: $margin;
                 }
-            }
 
-            /* -------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------- */
-            .p_texto_blog{           
-                font-size: $fontSizeTexto;
-                color: $colorDos;
-                font-weight: 600;
-                text-align: justify;
-                line-height: 25px;
-                margin: 20px auto 20px auto;              
+                /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
+                .ellipseGradiente{
+                    @include radial_Gradiente (radial-gradient(ellipse, $colorCuatro, $colorCinco), center, 20px auto); 
+
+                    &__h3{
+                        font-size: $fontSizeH3Elipse;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                        color: $colorTres;
+                        align-items: center;
+                        text-align: center;
+                    }
+                }
+
+                /* -------- ESTILO PARA EL PARRAFO ------- */
+                &__parrafo{           
+                    font-size: $fontSizeTexto;
+                    color: $colorDos;
+                    font-weight: 600;
+                    text-align: justify;
+                    line-height: 25px;
+                    margin: 20px auto 20px auto;              
+                }
             }
         }
     }
 
     /* ---------------------- MAIN CONTACTO ------------------------- */
+
     /* -------------- PROPIEDADES PARA EL CONTENEDOR DE IMG APLICANDO MIXIN------------- */
     @mixin img_Contacto ($display, $align-items, $justify-content, $margin){
         display: $display;
@@ -348,6 +373,8 @@ main {
     }
     
     /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */
+
+     /* ----------- PROPIEDADES PARA EL SECTION --------- */
     .terminos_condiciones{
         margin-top:auto;
         padding: 5px 5px 5px 5px;

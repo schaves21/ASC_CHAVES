@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* ------------ IMPORTO LOS ARCHIVOS SCSS NECESARIOS PARA PROCESAR ------- */
+/* ------------ IMPORTA LOS ARCHIVOS SCSS NECESARIOS PARA PROCESAR ------- */
 /* ---------------- VARIABLES -------------------*/
 /* ----------------------- GOOGLE FONTS ---------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
@@ -35,9 +35,14 @@ header {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  /* ---------- PROPIEDADES PARA EL NAV -------------------- */
   /* ----------- PROPIEDADES EN EL CONTENEDOR DEL TITULO APLICANDO MIXIN---------------- */ }
   header nav {
     background-color: transparent; }
+    header nav a {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px; }
   header .titulos {
     display: flex;
     justify-content: center;
@@ -45,14 +50,18 @@ header {
     text-align: center;
     flex-direction: column;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px; }
     header .titulos__titulo {
       color: #fff;
       font-size: 50px;
-      font-weight: 700; }
+      font-weight: 700;
+      padding: auto 10px auto 10px; }
     header .titulos__subtitulo {
-      color: #f7f7f7;
-      font-size: 30px; }
+      color: #fff;
+      font-size: 25px;
+      padding: auto 10px auto 10px; }
 
 /*  -------------- MAIN PARA TODAS LAS PAGINAS --------------------- */
 main {
@@ -60,21 +69,18 @@ main {
   /* ------------- EFECTO GRADIENTE EN LOS CONTENEDORES APLICANDO MIXIN ------------- */
   /* -------------- PARRAFO GENERICO PARA LA MAYORIA DE LAS PAGINAS ---------------- */
   /* ------------------ ESTILOS MAIN HOME ------------------------ */
-  /* ------------------- H2 PARA CAROUSEL ------------------------ */
-  /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */
   /* ----------- PROPIEDADES EN EL CONTENEDOR APLICANDO MIXIN---------------- */
   /* ---------------------- MAIN EMPRESA ------------------------- */
   /* ----------PROPIEDADES PARA EL CONTENEDOR DE EMPRESA --------- */
   /* --------------------- MAIN TRABAJOS ------------------------- */
-  /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
-  /* ----------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------------ */
   /* ------------------------ MAIN BLOG -------------------------- */
   /* ----------- PROPIEDADES PARA EL CONTENEDOR DEL BLOG --------- */
   /* ---------------------- MAIN CONTACTO ------------------------- */
   /* -------------- PROPIEDADES PARA EL CONTENEDOR DE IMG APLICANDO MIXIN------------- */
   /* -------------- PROPIEDADES PARA EL FORM APLICANDO MIXIN ------------------ */
   /* -------------- PROPIEDADES PARA EL MAPA APLICANDO MIXIN ------------------ */
-  /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */ }
+  /* ---------------- MAIN TERMINOS Y CONDICIONES ----------------- */
+  /* ----------- PROPIEDADES PARA EL SECTION --------- */ }
   main .gradiente {
     height: 80px;
     display: flex;
@@ -84,7 +90,7 @@ main {
     margin: 20px auto;
     background-image: linear-gradient(to right, #5A3673, #03A64A); }
     main .gradiente__subtitulo {
-      font-size: 30px;
+      font-size: 34px;
       font-weight: bold;
       color: #BAD94A;
       animation-duration: 3s;
@@ -103,21 +109,24 @@ main {
     font-weight: 600;
     text-align: justify;
     margin: 20px 20px 20px 20px; }
-  main .h2_carousel {
-    font-size: 34px;
-    font-weight: bold;
-    background: linear-gradient(rgba(255, 255, 255, 0), black); }
-  main .p_carousel {
-    font-size: 24px;
-    background: linear-gradient(rgba(255, 255, 255, 0), black);
-    font-weight: bold; }
+  main .slider {
+    /* ------------------- H2 PARA CAROUSEL ------------------------ */
+    /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */ }
+    main .slider__titulo {
+      font-size: 34px;
+      font-weight: bold;
+      background: linear-gradient(rgba(255, 255, 255, 0), black); }
+    main .slider__parrafo {
+      font-size: 24px;
+      background: linear-gradient(rgba(255, 255, 255, 0), black);
+      font-weight: bold; }
   main .formato {
     text-align: center; }
     main .formato__icono {
       vertical-align: top;
       margin-bottom: 30px; }
-    main .formato__h4 {
-      font-size: 28px;
+    main .formato__h3 {
+      font-size: 30px;
       color: #BAD94A;
       font-weight: bold;
       margin-bottom: 30px; }
@@ -133,80 +142,86 @@ main {
     margin-top: 30px;
     margin-bottom: 30px;
     /* -------------- FORMATO PARA LAS IMG -------------------- */
-    /* -------------- H2 PARA SUB TITULO DE EMPRESA ------------ */
-    /* -------------- PARRAFO PARA EMPRESA -------------------- */
     /* -------------- LINEA DE SEPARACION CON UN DIV APLICANDO MIXIN ----------- */ }
     main .empresa img {
       border-radius: 10px;
       width: 100%;
       vertical-align: top;
       object-fit: cover; }
-    main .empresa .h2_titulo_empresa {
-      font-size: 28px;
-      margin: 30px auto 20px auto;
-      font-weight: bold;
-      color: #BAD94A;
-      text-align: center; }
-    main .empresa .p_texto_empresa {
-      font-size: 16px;
-      color: gray;
-      font-weight: 600;
-      text-align: justify; }
+    main .empresa .columna {
+      /* -------------- H2 PARA SUBTITULO DE EMPRESA ------------ */
+      /* -------------- PARRAFO PARA EMPRESA -------------------- */ }
+      main .empresa .columna__titulo {
+        font-size: 30px;
+        margin: 30px auto 20px auto;
+        font-weight: bold;
+        color: #BAD94A;
+        text-align: center; }
+      main .empresa .columna__parrafo {
+        font-size: 16px;
+        color: gray;
+        font-weight: 600;
+        text-align: justify; }
     main .empresa .linea {
       border-top: 2px solid #03A64A;
       height: 4px;
       padding: 0;
       margin: 20px auto 20px auto; }
-  main .radialGradiente {
-    background-image: radial-gradient(circle, #5A3673, #03A64A);
-    align-items: center;
-    margin: 20px auto; }
-    main .radialGradiente__h3 {
-      font-size: 28px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-weight: bold;
-      color: #BAD94A; }
-  main .p_trabajo_parrafo {
-    font-size: 16px;
-    color: gray;
-    font-weight: 600;
-    text-align: justify;
-    line-height: 25px;
-    margin: 20px auto 20px auto; }
+  main .formato {
+    /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+    /* ----------- ESTILO PARA EL PARRAFO------------ */ }
+    main .formato .radialGradiente {
+      background-image: radial-gradient(circle, #5A3673, #03A64A);
+      align-items: center;
+      margin: 20px auto; }
+      main .formato .radialGradiente__h3 {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        color: #BAD94A; }
+    main .formato__parrafo {
+      font-size: 16px;
+      color: gray;
+      font-weight: 600;
+      text-align: justify;
+      line-height: 25px;
+      margin: 20px auto 20px auto; }
   main .blog {
     margin-top: 30px;
     margin-bottom: 30px;
     /* ------------- PROPIEDADES PARA EL CONTENEDOR ROW APLICANDO MIXIN--------- */ }
     main .blog .row {
       margin: 30px auto;
-      /* ------------- FORMATO PARA LAS IMG ------------------ */
-      /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
-      /* -------- ESTILO PARA CADA PARRAFO DE TRABAJOS ------- */ }
+      /* ------------- FORMATO PARA LAS IMG ------------------ */ }
       main .blog .row img {
         border-radius: 100%;
         width: 100%;
         vertical-align: top;
         object-fit: cover; }
-      main .blog .row .ellipseGradiente {
-        background-image: radial-gradient(ellipse, #03A64A, #5A3673);
-        align-items: center;
-        margin: 20px auto; }
-        main .blog .row .ellipseGradiente__h2 {
-          font-size: 20px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          font-weight: bold;
-          color: #BAD94A;
+      main .blog .row .valor {
+        /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
+        /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
+        /* -------- ESTILO PARA EL PARRAFO ------- */ }
+        main .blog .row .valor .ellipseGradiente {
+          background-image: radial-gradient(ellipse, #03A64A, #5A3673);
           align-items: center;
-          text-align: center; }
-      main .blog .row .p_texto_blog {
-        font-size: 16px;
-        color: gray;
-        font-weight: 600;
-        text-align: justify;
-        line-height: 25px;
-        margin: 20px auto 20px auto; }
+          margin: 20px auto; }
+          main .blog .row .valor .ellipseGradiente__h3 {
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            color: #BAD94A;
+            align-items: center;
+            text-align: center; }
+        main .blog .row .valor__parrafo {
+          font-size: 16px;
+          color: gray;
+          font-weight: 600;
+          text-align: justify;
+          line-height: 25px;
+          margin: 20px auto 20px auto; }
   main .img_contacto {
     display: flex;
     align-items: center;
@@ -305,7 +320,7 @@ main {
       background-image: linear-gradient(to right, #5A3673, #03A64A);
       /* -------------- H2 PARA SUBTITULO DE CONTACTO -------------------- */ }
       main .terminos_condiciones .gradienteApp__h3 {
-        font-size: 28px;
+        font-size: 30px;
         font-weight: bold;
         color: #BAD94A; }
 
@@ -364,13 +379,56 @@ footer {
           background-color: #BAD94A;
           transform: scale(1.2); }
 
-/* -------MEDIAS QUERIES PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO ----- */
-@media only screen and (max-width: 992px) {
+/* ------- MEDIAS QUERIES PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO ----- */
+/* ------- SI VARIABLE ES IGUAL A MOBILE APLICA EL MODO RESPONSIVO --------------*/
+@media only screen and (max-width: 587px) {
+  header {
+    width: 100vw;
+    height: 50vh; }
+    header nav {
+      width: 100vw; }
+      header nav img {
+        width: 35vw; }
+    header .titulos {
+      display: none; }
+  main .container {
+    margin-top: 20px; }
+  main .gradiente {
+    display: none; }
+  main .mapa_responsivo {
+    display: none; }
   footer {
-    height: 30vh; }
+    width: 100vw;
+    height: 50vh; }
+    footer .footer_padre {
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      footer .footer_padre .footer_info {
+        width: 100vw; }
+      footer .footer_padre .footer_logo {
+        width: 100vw; }
+        footer .footer_padre .footer_logo img {
+          width: 35vw; }
+      footer .footer_padre .footer_social {
+        width: 100vw; } }
+
+@media only screen and (max-width: 780px) {
+  header {
+    width: 100vw;
+    height: 80vh; }
+    header .titulos {
+      width: 100vw;
+      height: 30vh; }
+  footer {
+    width: 100vw;
+    height: 80vh; }
     footer .footer_padre {
       flex-direction: column; } }
 
+/* ------- SI VARIABLE ES IGUAL A DESKTOP APLICA EL ESCRITORIO --------------*/
 @media only screen and (min-width: 992px) {
   .footer_padre {
     flex-direction: row; } }
