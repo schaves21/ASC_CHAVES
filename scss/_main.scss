@@ -48,6 +48,7 @@ main {
     /* ------------------ ESTILOS MAIN HOME ------------------------ */
 
     .slider{
+        margin: auto;
 
             /* ------------------- H2 PARA CAROUSEL ------------------------ */
         &__titulo {
@@ -114,6 +115,7 @@ main {
         }
 
         .columna{
+            margin: auto;
 
             /* -------------- H2 PARA SUBTITULO DE EMPRESA ------------ */
             &__titulo{
@@ -149,6 +151,7 @@ main {
     /* --------------------- MAIN TRABAJOS ------------------------- */
 
     .formato{
+        padding: auto;
 
         /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
         @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){
@@ -204,6 +207,7 @@ main {
             }
 
             .valor{
+                margin: auto;
 
                 /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
                 @mixin radial_Gradiente ($radial-bgcolor, $align-items, $margin){

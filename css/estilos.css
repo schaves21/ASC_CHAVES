@@ -43,6 +43,8 @@ header {
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 2px; }
+    header nav .nav-item {
+      border-bottom: 2px solid #fff; }
   header .titulos {
     display: flex;
     justify-content: center;
@@ -110,6 +112,7 @@ main {
     text-align: justify;
     margin: 20px 20px 20px 20px; }
   main .slider {
+    margin: auto;
     /* ------------------- H2 PARA CAROUSEL ------------------------ */
     /* ---------------- PARRAFO PARA CAROUSEL ---------------------- */ }
     main .slider__titulo {
@@ -149,6 +152,7 @@ main {
       vertical-align: top;
       object-fit: cover; }
     main .empresa .columna {
+      margin: auto;
       /* -------------- H2 PARA SUBTITULO DE EMPRESA ------------ */
       /* -------------- PARRAFO PARA EMPRESA -------------------- */ }
       main .empresa .columna__titulo {
@@ -168,6 +172,7 @@ main {
       padding: 0;
       margin: 20px auto 20px auto; }
   main .formato {
+    padding: auto;
     /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
     /* ----------- ESTILO PARA EL PARRAFO------------ */ }
     main .formato .radialGradiente {
@@ -200,6 +205,7 @@ main {
         vertical-align: top;
         object-fit: cover; }
       main .blog .row .valor {
+        margin: auto;
         /* ----------- GRADIENTE RADIAL EN CONTENEDOR APLICANDO MIXIN---------------- */
         /* ----- USO DE RADIAL-GRADIENTE CON PARÁMETRO ELLIPSE ------------- */
         /* -------- ESTILO PARA EL PARRAFO ------- */ }
@@ -329,7 +335,7 @@ footer {
   grid-area: footer;
   width: 100%;
   background: #03A64A;
-  padding: 20px 0;
+  padding: 10px 0;
   /* ----------------- PROPIEDADES EN EL CONTENEDOR PADRE APLICANDO MIXIN---------------- */ }
   footer .footer_padre {
     display: flex;
@@ -382,50 +388,57 @@ footer {
 /* ------- MEDIAS QUERIES PARA DISPOSITIVOS MOVILES - TABLETS - ESCRITORIO ----- */
 /* ------- SI VARIABLE ES IGUAL A MOBILE APLICA EL MODO RESPONSIVO --------------*/
 @media only screen and (max-width: 587px) {
-  header {
-    width: 100vw;
-    height: 50vh; }
-    header nav {
-      width: 100vw; }
-      header nav img {
-        width: 35vw; }
-    header .titulos {
-      display: none; }
-  main .container {
-    margin-top: 20px; }
-  main .gradiente {
-    display: none; }
-  main .mapa_responsivo {
-    display: none; }
-  footer {
-    width: 100vw;
-    height: 50vh; }
-    footer .footer_padre {
+  body {
+    overflow-x: hidden; }
+    body header {
       width: 100vw;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-      footer .footer_padre .footer_info {
+      height: 45vh; }
+      body header nav {
         width: 100vw; }
-      footer .footer_padre .footer_logo {
-        width: 100vw; }
-        footer .footer_padre .footer_logo img {
+        body header nav img {
           width: 35vw; }
-      footer .footer_padre .footer_social {
-        width: 100vw; } }
+      body header .titulos {
+        display: none; }
+    body main .container {
+      margin-top: 20px; }
+    body main .gradiente {
+      display: none; }
+    body main .img_contacto {
+      display: none; }
+    body main .mapa_responsivo {
+      display: none; }
+    body footer {
+      width: 100vw;
+      height: 45vh; }
+      body footer .footer_padre {
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        body footer .footer_padre .footer_info {
+          width: 100vw; }
+        body footer .footer_padre .footer_logo {
+          width: 100vw; }
+          body footer .footer_padre .footer_logo img {
+            width: 35vw; }
+        body footer .footer_padre .footer_social {
+          width: 100vw; } }
 
 @media only screen and (max-width: 780px) {
   header {
     width: 100vw;
-    height: 80vh; }
+    height: 70vh; }
     header .titulos {
       width: 100vw;
-      height: 30vh; }
+      height: 30vh;
+      padding-bottom: 50px; }
   footer {
     width: 100vw;
-    height: 80vh; }
+    height: 55vh; }
     footer .footer_padre {
+      padding-top: 30px;
+      padding-bottom: 0;
       flex-direction: column; } }
 
 /* ------- SI VARIABLE ES IGUAL A DESKTOP APLICA EL ESCRITORIO --------------*/

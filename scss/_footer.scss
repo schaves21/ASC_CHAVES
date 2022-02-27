@@ -3,7 +3,7 @@ footer {
     grid-area: footer;
     width: 100%;
     background: $colorCuatro;
-    padding: 20px 0;
+    padding: 10px 0;
 
     /* ----------------- PROPIEDADES EN EL CONTENEDOR PADRE APLICANDO MIXIN---------------- */
     @mixin footer_Padre ($display, $flex-direction, $flex-wrap, $justify-content, $align-items){
