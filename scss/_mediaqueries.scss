@@ -3,20 +3,20 @@
 /* ------- SI VARIABLE ES IGUAL A MOBILE APLICA EL MODO RESPONSIVO --------------*/
 @if $vistaMobile == mobile{
 
-    @media only screen and (max-width:587px){
-        
+    @media only screen and (max-width:587px){      
         body{
             overflow-x: hidden;
 
             header{
                 width: 100vw;
-                height: 45vh;
+                height: 50vh;
     
                 nav{
                     width: 100vw;
+                    margin-bottom: 10px;
     
                     img{
-                        width: 35vw;
+                        width: 30vw;
                     }     
                 }
     
@@ -45,7 +45,7 @@
     
             footer{
                 width: 100vw;
-                height: 45vh;
+                height: 50vh;
         
                 .footer_padre{
                     width: 100vw;
@@ -79,8 +79,9 @@
 
             .titulos{
                 width: 100vw;
-                height: 30vh;
-                padding-bottom: 50px;
+                height: 25vh;
+                padding-top: 20px;
+                padding-bottom: 40px;
             }
         }
         
@@ -90,7 +91,6 @@
 
             .footer_padre{
                 padding-top: 30px;
-                padding-bottom: 0;
                 flex-direction: column;
             }
         }
@@ -100,6 +100,11 @@
 /* ------- SI VARIABLE ES IGUAL A DESKTOP APLICA EL ESCRITORIO --------------*/
 @if $vistaDesktop == desktop{
     @media only screen and (min-width:992px){
+        .titulos{
+            width: 100vw;
+            height: 50vh;
+            padding-bottom: 20px;
+        }
         .footer_padre{
             flex-direction: row;
         }

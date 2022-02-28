@@ -62,7 +62,7 @@ header {
       padding: auto 10px auto 10px; }
     header .titulos__subtitulo {
       color: #fff;
-      font-size: 25px;
+      font-size: 30px;
       padding: auto 10px auto 10px; }
 
 /*  -------------- MAIN PARA TODAS LAS PAGINAS --------------------- */
@@ -392,11 +392,12 @@ footer {
     overflow-x: hidden; }
     body header {
       width: 100vw;
-      height: 45vh; }
+      height: 50vh; }
       body header nav {
-        width: 100vw; }
+        width: 100vw;
+        margin-bottom: 10px; }
         body header nav img {
-          width: 35vw; }
+          width: 30vw; }
       body header .titulos {
         display: none; }
     body main .container {
@@ -409,7 +410,7 @@ footer {
       display: none; }
     body footer {
       width: 100vw;
-      height: 45vh; }
+      height: 50vh; }
       body footer .footer_padre {
         width: 100vw;
         flex-direction: column;
@@ -431,17 +432,21 @@ footer {
     height: 70vh; }
     header .titulos {
       width: 100vw;
-      height: 30vh;
-      padding-bottom: 50px; }
+      height: 25vh;
+      padding-top: 20px;
+      padding-bottom: 40px; }
   footer {
     width: 100vw;
     height: 55vh; }
     footer .footer_padre {
       padding-top: 30px;
-      padding-bottom: 0;
       flex-direction: column; } }
 
 /* ------- SI VARIABLE ES IGUAL A DESKTOP APLICA EL ESCRITORIO --------------*/
 @media only screen and (min-width: 992px) {
+  .titulos {
+    width: 100vw;
+    height: 50vh;
+    padding-bottom: 20px; }
   .footer_padre {
     flex-direction: row; } }
